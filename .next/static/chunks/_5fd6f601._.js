@@ -5339,19 +5339,7 @@ function Page() {
                         onGameOver: (score, lines)=>{
                             setGameOver(true);
                             setGameStarted(false);
-                            // Clear payment state after game over (for paid games only)
-                            if (!isOfflineMode) {
-                                setTimeout(()=>{
-                                    setIsPaid(false);
-                                    setSelectedGame(null);
-                                    try {
-                                        localStorage.setItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].IS_PAID, 'false');
-                                        localStorage.removeItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].SELECTED_GAME);
-                                    } catch (e) {
-                                        console.error(e);
-                                    }
-                                }, 5000); // 5 second delay to allow score publishing
-                            }
+                        // Only clear payment state on refresh/page reload, not on game over
                         },
                         onPlayAgain: isOfflineMode ? handleOfflineRestart : ()=>handleGamePayment('tetris'),
                         onPublishScore: handlePublishScore,
@@ -5365,26 +5353,14 @@ function Page() {
                         onGameOver: (score, level)=>{
                             setGameOver(true);
                             setGameStarted(false);
-                            // Clear payment state after game over (for paid games only)
-                            if (!isOfflineMode) {
-                                setTimeout(()=>{
-                                    setIsPaid(false);
-                                    setSelectedGame(null);
-                                    try {
-                                        localStorage.setItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].IS_PAID, 'false');
-                                        localStorage.removeItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].SELECTED_GAME);
-                                    } catch (e) {
-                                        console.error(e);
-                                    }
-                                }, 5000); // 5 second delay to allow score publishing
-                            }
+                        // Only clear payment state on refresh/page reload, not on game over
                         },
                         onPlayAgain: isOfflineMode ? handleOfflineRestart : ()=>handleGamePayment('pacman'),
                         onPublishScore: handlePublishScore,
                         playerAddress: isOfflineMode ? undefined : address
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 563,
+                        lineNumber: 553,
                         columnNumber: 3
                     }, this) : null
                 }, void 0, false, {
@@ -5394,7 +5370,7 @@ function Page() {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 586,
+                    lineNumber: 566,
                     columnNumber: 9
                 }, this)
             ]
@@ -5417,7 +5393,7 @@ function Page() {
                 isOfflineMode: isOfflineMode
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 594,
+                lineNumber: 574,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5430,7 +5406,7 @@ function Page() {
                 address: address
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 602,
+                lineNumber: 582,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5461,7 +5437,7 @@ function Page() {
                             children: "🔄"
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 622,
+                            lineNumber: 602,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -5471,7 +5447,7 @@ function Page() {
                             children: "Loading..."
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 623,
+                            lineNumber: 603,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5481,29 +5457,29 @@ function Page() {
                             children: "Initializing 375 Arcade..."
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 624,
+                            lineNumber: 604,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 612,
+                    lineNumber: 592,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 611,
+                lineNumber: 591,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 627,
+                lineNumber: 607,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 593,
+        lineNumber: 573,
         columnNumber: 5
     }, this);
 }

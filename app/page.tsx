@@ -543,17 +543,7 @@ export default function Page() {
     onGameOver={(score, lines) => {
       setGameOver(true);
       setGameStarted(false);
-      // Clear payment state after game over (for paid games only)
-      if (!isOfflineMode) {
-        setTimeout(() => {
-          setIsPaid(false);
-          setSelectedGame(null);
-          try {
-            localStorage.setItem(STORAGE_KEYS.IS_PAID, 'false');
-            localStorage.removeItem(STORAGE_KEYS.SELECTED_GAME);
-          } catch (e) { console.error(e); }
-        }, 5000); // 5 second delay to allow score publishing
-      }
+      // Only clear payment state on refresh/page reload, not on game over
     }}
     onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('tetris')}
     onPublishScore={handlePublishScore}
@@ -565,17 +555,7 @@ export default function Page() {
     onGameOver={(score, level) => {
       setGameOver(true);
       setGameStarted(false);
-      // Clear payment state after game over (for paid games only)
-      if (!isOfflineMode) {
-        setTimeout(() => {
-          setIsPaid(false);
-          setSelectedGame(null);
-          try {
-            localStorage.setItem(STORAGE_KEYS.IS_PAID, 'false');
-            localStorage.removeItem(STORAGE_KEYS.SELECTED_GAME);
-          } catch (e) { console.error(e); }
-        }, 5000); // 5 second delay to allow score publishing
-      }
+      // Only clear payment state on refresh/page reload, not on game over
     }}
     onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('pacman')}
     onPublishScore={handlePublishScore}
