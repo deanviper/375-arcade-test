@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { getResponsiveStyles } from '../../utils/responsive';
 
 interface NavigationHeaderProps {
@@ -20,6 +21,15 @@ export default function NavigationHeader({
   isOfflineMode
 }: NavigationHeaderProps) {
   const responsiveStyles = getResponsiveStyles();
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const handleMouseEnter = (dropdown: string) => {
+    setActiveDropdown(dropdown);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
+  };
 
   return (
     <>
@@ -45,6 +55,12 @@ export default function NavigationHeader({
           transform: translateY(-2px) !important;
           box-shadow: 0 4px 15px rgba(156, 163, 175, 0.3) !important;
         }
+        .dropdown-button-hover:hover {
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(255, 215, 0, 0.1) 100%) !important;
+          border: 2px solid rgba(255, 215, 0, 0.5) !important;
+          transform: translateY(-2px) !important;
+          box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3) !important;
+        }
         .disconnect-button-hover {
           transition: all 0.3s ease !important;
         }
@@ -62,6 +78,36 @@ export default function NavigationHeader({
           border: 1px solid rgba(80, 255, 214, 0.5) !important;
           transform: translateY(-1px) !important;
           box-shadow: 0 2px 10px rgba(80, 255, 214, 0.3) !important;
+        }
+        .dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: linear-gradient(135deg, rgba(8, 8, 12, 0.95) 0%, rgba(15, 15, 20, 0.95) 100%);
+          border: 1px solid rgba(255, 215, 0, 0.3);
+          border-radius: 8px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(12px);
+          min-width: 150px;
+          z-index: 1200;
+          margin-top: 5px;
+        }
+        .dropdown-item {
+          padding: 10px 16px;
+          color: #E5E7EB;
+          text-decoration: none;
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+          transition: all 0.2s ease;
+          border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        .dropdown-item:last-child {
+          border-bottom: none;
+        }
+        .dropdown-item:hover {
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+          color: #FFD700;
         }
       `}</style>
       <div style={{
@@ -100,6 +146,95 @@ export default function NavigationHeader({
             >
               Home
             </button>
+            
+            <div 
+              style={{ position: 'relative' }}
+              onMouseEnter={() => handleMouseEnter('375ai')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                className="header-button-hover dropdown-button-hover"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%)',
+                  border: '2px solid transparent',
+                  borderRadius: '12px',
+                  padding: '10px 20px',
+                  color: '#FFD700',
+                  fontSize: responsiveStyles.fontSize,
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}
+              >
+                What is 375ai? ▼
+              </button>
+              {activeDropdown === '375ai' && (
+                <div className="dropdown-menu">
+                  <a 
+                    href="https://375.ai/about" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="dropdown-item"
+                  >
+                    📋 ABOUT
+                  </a>
+                  <a 
+                    href="https://x.com/375ai_" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="dropdown-item"
+                  >
+                    🐦 X (TWITTER)
+                  </a>
+                </div>
+              )}
+            </div>
+
+            <div 
+              style={{ position: 'relative' }}
+              onMouseEnter={() => handleMouseEnter('irys')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                className="header-button-hover dropdown-button-hover"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%)',
+                  border: '2px solid transparent',
+                  borderRadius: '12px',
+                  padding: '10px 20px',
+                  color: '#FFD700',
+                  fontSize: responsiveStyles.fontSize,
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}
+              >
+                What is Irys? ▼
+              </button>
+              {activeDropdown === 'irys' && (
+                <div className="dropdown-menu">
+                  <a 
+                    href="https://docs.irys.xyz/learn/what/what-irys-is" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="dropdown-item"
+                  >
+                    📋 ABOUT
+                  </a>
+                  <a 
+                    href="https://x.com/irys_xyz" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="dropdown-item"
+                  >
+                    🐦 X (TWITTER)
+                  </a>
+                </div>
+              )}
+            </div>
+            
             <button
               onClick={() => window.open('https://irys.xyz/faucet', '_blank')}
               className="header-button-hover faucet-button-hover"

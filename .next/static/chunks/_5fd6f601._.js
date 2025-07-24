@@ -713,7 +713,9 @@ function CanvasTetris(param) {
                     color: 'white',
                     fontSize: '24px',
                     fontFamily: 'sans-serif',
-                    zIndex: 9999
+                    zIndex: 99999,
+                    margin: 0,
+                    padding: 0
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
@@ -723,7 +725,9 @@ function CanvasTetris(param) {
                         textAlign: 'center',
                         border: '2px solid #666',
                         minWidth: '300px',
-                        position: 'relative'
+                        position: 'relative',
+                        maxWidth: '500px',
+                        width: '90%'
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -756,7 +760,7 @@ function CanvasTetris(param) {
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 519,
+                            lineNumber: 538,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -767,7 +771,7 @@ function CanvasTetris(param) {
                             children: "Game Over!"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 532,
+                            lineNumber: 567,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -786,13 +790,13 @@ function CanvasTetris(param) {
                                             children: scoreRef.current
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasTetris.tsx",
-                                            lineNumber: 534,
+                                            lineNumber: 569,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 534,
+                                    lineNumber: 569,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -805,13 +809,13 @@ function CanvasTetris(param) {
                                             children: linesRef.current
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasTetris.tsx",
-                                            lineNumber: 535,
+                                            lineNumber: 570,
                                             columnNumber: 35
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 535,
+                                    lineNumber: 570,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -824,19 +828,19 @@ function CanvasTetris(param) {
                                             children: levelRef.current
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasTetris.tsx",
-                                            lineNumber: 536,
+                                            lineNumber: 571,
                                             columnNumber: 35
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 536,
+                                    lineNumber: 571,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 533,
+                            lineNumber: 568,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -861,7 +865,7 @@ function CanvasTetris(param) {
                                     children: "Play Again"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 540,
+                                    lineNumber: 575,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -878,7 +882,7 @@ function CanvasTetris(param) {
                                     children: "🐦 Tweet Score"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 545,
+                                    lineNumber: 580,
                                     columnNumber: 15
                                 }, this),
                                 playerAddress && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -897,13 +901,13 @@ function CanvasTetris(param) {
                                     children: isPublishing ? '⏳ Publishing...' : '🏆 Publish to Leaderboards'
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 551,
+                                    lineNumber: 586,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 539,
+                            lineNumber: 574,
                             columnNumber: 13
                         }, this),
                         isPublishing && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -915,13 +919,13 @@ function CanvasTetris(param) {
                             children: "Sign the transaction in your wallet to publish your score to the blockchain"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 564,
+                            lineNumber: 599,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/CanvasTetris.tsx",
-                    lineNumber: 515,
+                    lineNumber: 527,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
@@ -949,6 +953,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
+// Reset ghosts with proper release'use client';
 __turbopack_context__.s({
     "default": ()=>CanvasPacman
 });
@@ -958,7 +963,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$js
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
-'use client';
 ;
 ;
 const COLS = 19;
@@ -1370,35 +1374,35 @@ const MAZE = [
         0
     ]
 ];
-// Much slower speed configurations (reduced significantly)
+// Much slower speed configurations (reduced significantly and further reduced ghost speed)
 const SPEED_CONFIG = {
     1: {
         pacman: 0.3,
-        ghost: 0.25,
+        ghost: 0.22,
         frightened: 0.15,
         tunnel: 0.1
     },
     2: {
         pacman: 0.35,
-        ghost: 0.28,
+        ghost: 0.26,
         frightened: 0.18,
         tunnel: 0.12
     },
     5: {
         pacman: 0.4,
-        ghost: 0.32,
+        ghost: 0.30,
         frightened: 0.2,
         tunnel: 0.15
     },
     17: {
         pacman: 0.4,
-        ghost: 0.32,
+        ghost: 0.30,
         frightened: 0,
         tunnel: 0.15
     },
     21: {
         pacman: 0.35,
-        ghost: 0.32,
+        ghost: 0.30,
         frightened: 0,
         tunnel: 0.15
     }
@@ -1460,7 +1464,7 @@ function CanvasPacman(param) {
             releaseTimer: 0,
             frightenedTimer: 0,
             pauseTimer: 0,
-            speed: 0.25,
+            speed: 0.22,
             cornerTargets: [
                 {
                     x: 18,
@@ -1480,10 +1484,10 @@ function CanvasPacman(param) {
             color: '#FFB8FF',
             originalColor: '#FFB8FF',
             personalityType: 'PINKY',
-            releaseTimer: 90,
+            releaseTimer: 120,
             frightenedTimer: 0,
             pauseTimer: 0,
-            speed: 0.25,
+            speed: 0.22,
             cornerTargets: [
                 {
                     x: 0,
@@ -1503,10 +1507,10 @@ function CanvasPacman(param) {
             color: '#00FFFF',
             originalColor: '#00FFFF',
             personalityType: 'INKY',
-            releaseTimer: 180,
+            releaseTimer: 240,
             frightenedTimer: 0,
             pauseTimer: 0,
-            speed: 0.25,
+            speed: 0.22,
             cornerTargets: [
                 {
                     x: 18,
@@ -1526,10 +1530,10 @@ function CanvasPacman(param) {
             color: '#FFB847',
             originalColor: '#FFB847',
             personalityType: 'CLYDE',
-            releaseTimer: 270,
+            releaseTimer: 360,
             frightenedTimer: 0,
             pauseTimer: 0,
-            speed: 0.25,
+            speed: 0.22,
             cornerTargets: [
                 {
                     x: 0,
@@ -1628,7 +1632,7 @@ function CanvasPacman(param) {
                 y: Math.floor(Math.random() * ROWS)
             };
         }
-        if (ghost.mode === 'EATEN') {
+        if (ghost.mode === 'EATEN' || ghost.mode === 'RETURNING') {
             return {
                 x: 9,
                 y: 9
@@ -1718,7 +1722,7 @@ function CanvasPacman(param) {
                 gameStateRef.current.ghostCombo = 0;
                 // Make all active ghosts frightened
                 ghostsRef.current.forEach((g)=>{
-                    if (g.mode !== 'CAGE' && g.mode !== 'EATEN') {
+                    if (g.mode !== 'CAGE' && g.mode !== 'EATEN' && g.mode !== 'RETURNING') {
                         g.mode = 'FRIGHTENED';
                         g.frightenedTimer = gameStateRef.current.powerTimer;
                         // Reverse direction when becoming frightened
@@ -1743,12 +1747,21 @@ function CanvasPacman(param) {
                 return;
             } else {
                 ghost.mode = 'CHASE';
-                ghost.y = 9; // Move out of cage
+                ghost.x = 9; // Ensure proper positioning
+                ghost.y = 9; // Move out of cage to center
+            }
+        }
+        // Handle returning to cage after being eaten
+        if (ghost.mode === 'RETURNING') {
+            if (ghost.x === 9 && ghost.y === 9) {
+                ghost.mode = 'CHASE';
+                ghost.color = ghost.originalColor;
+                ghost.frightenedTimer = 0;
             }
         }
         // Much slower ghost movement
         const speedConfig = getCurrentSpeedConfig();
-        const moveInterval = Math.ceil(1 / (ghost.mode === 'FRIGHTENED' ? speedConfig.frightened : speedConfig.ghost));
+        const moveInterval = Math.ceil(1 / (ghost.mode === 'FRIGHTENED' ? speedConfig.frightened : ghost.mode === 'EATEN' || ghost.mode === 'RETURNING' ? speedConfig.ghost * 2 : speedConfig.ghost));
         if (gameStateRef.current.frameCount % moveInterval !== 0) {
             return;
         }
@@ -1823,17 +1836,16 @@ function CanvasPacman(param) {
                     const points = 200 * Math.pow(2, gameStateRef.current.ghostCombo - 1);
                     gameStateRef.current.score += points;
                     setScore(gameStateRef.current.score);
-                    ghost.mode = 'EATEN';
+                    ghost.mode = 'RETURNING';
                     ghost.color = '#666666'; // Gray for eaten ghost
-                    ghost.pauseTimer = 30; // 1 second pause at 30fps
-                    // Brief game pause for effect
+                    // Pause the entire game for 1 second when eating ghost
                     gameStateRef.current.paused = true;
                     setTimeout(()=>{
                         if (!gameStateRef.current.gameOver) {
                             gameStateRef.current.paused = false;
                         }
-                    }, 33); // Brief pause
-                } else if (ghost.mode !== 'EATEN') {
+                    }, 1000); // 1 second pause
+                } else if (ghost.mode !== 'EATEN' && ghost.mode !== 'RETURNING') {
                     // Ghost caught Pacman
                     gameStateRef.current.lives--;
                     setLives(gameStateRef.current.lives);
@@ -1852,15 +1864,21 @@ function CanvasPacman(param) {
                         // Reset ghosts
                         const speedConfig = getCurrentSpeedConfig();
                         ghostsRef.current.forEach((g, i)=>{
-                            g.x = i === 0 ? 9 : 8 + i;
-                            g.y = i === 0 ? 9 : 10;
+                            if (i === 0) {
+                                g.x = 9;
+                                g.y = 9; // Blinky starts in center
+                            } else {
+                                // Properly position other ghosts in cage
+                                g.x = 7 + i;
+                                g.y = 10; // Spread them out more
+                            }
                             g.mode = i === 0 ? 'CHASE' : 'CAGE';
                             g.dir = i % 2 === 0 ? 'UP' : 'DOWN';
                             g.speed = speedConfig.ghost;
                             g.frightenedTimer = 0;
                             g.pauseTimer = 0;
                             g.color = g.originalColor;
-                            g.releaseTimer = i === 0 ? 0 : i * 90; // Stagger release every 3 seconds
+                            g.releaseTimer = i === 0 ? 0 : i * 120; // Stagger release every 4 seconds
                         });
                         gameStateRef.current.powerMode = false;
                         gameStateRef.current.powerTimer = 0;
@@ -1884,11 +1902,17 @@ function CanvasPacman(param) {
             if (Math.random() < 0.001) {
                 cherry.active = true;
                 cherry.timer = FRAME_RATE * 15; // 15 seconds
-                // Random position in playable area
+                // Random position in playable area, ensuring it's not in walls
+                let attempts = 0;
                 do {
-                    cherry.x = Math.floor(Math.random() * COLS);
-                    cherry.y = Math.floor(Math.random() * ROWS);
-                }while (mazeRef.current[cherry.y][cherry.x] === 0)
+                    cherry.x = Math.floor(Math.random() * (COLS - 2)) + 1; // Avoid edges
+                    cherry.y = Math.floor(Math.random() * (ROWS - 2)) + 1; // Avoid edges
+                    attempts++;
+                }while (mazeRef.current[cherry.y][cherry.x] === 0 && attempts < 50)
+                // If we can't find a good spot, don't spawn
+                if (attempts >= 50) {
+                    cherry.active = false;
+                }
             }
         } else {
             cherry.timer--;
@@ -1927,15 +1951,21 @@ function CanvasPacman(param) {
             // Reset ghosts with new speeds
             const speedConfig = getCurrentSpeedConfig();
             ghostsRef.current.forEach((g, i)=>{
-                g.x = i === 0 ? 9 : 8 + i;
-                g.y = i === 0 ? 9 : 10;
+                if (i === 0) {
+                    g.x = 9;
+                    g.y = 9; // Blinky starts in center
+                } else {
+                    // Properly position other ghosts in cage
+                    g.x = 7 + i;
+                    g.y = 10; // Spread them out more
+                }
                 g.mode = i === 0 ? 'CHASE' : 'CAGE';
                 g.dir = i % 2 === 0 ? 'UP' : 'DOWN';
                 g.speed = speedConfig.ghost;
                 g.frightenedTimer = 0;
                 g.pauseTimer = 0;
                 g.color = g.originalColor;
-                g.releaseTimer = i === 0 ? 0 : i * 90; // Stagger release
+                g.releaseTimer = i === 0 ? 0 : i * 120; // Stagger release every 4 seconds
             });
             gameStateRef.current.powerMode = false;
             gameStateRef.current.powerTimer = 0;
@@ -2012,9 +2042,9 @@ function CanvasPacman(param) {
                 }
             });
         });
-        // Draw cherry
+        // Draw cherry (only if in valid position)
         const cherry = cherryRef.current;
-        if (cherry.active) {
+        if (cherry.active && cherry.x >= 0 && cherry.x < COLS && cherry.y >= 0 && cherry.y < ROWS) {
             ctx.fillStyle = '#FF0000';
             ctx.beginPath();
             ctx.arc(cherry.x * BLOCK + BLOCK / 2, cherry.y * BLOCK + BLOCK / 2, 4, 0, Math.PI * 2);
@@ -2066,8 +2096,8 @@ function CanvasPacman(param) {
         ghostsRef.current.forEach((ghost)=>{
             const gx = ghost.x * BLOCK + BLOCK / 2;
             const gy = ghost.y * BLOCK + BLOCK / 2;
-            if (ghost.mode === 'EATEN') {
-                // Just draw eyes when eaten
+            if (ghost.mode === 'EATEN' || ghost.mode === 'RETURNING') {
+                // Just draw eyes when eaten/returning
                 ctx.fillStyle = '#FFF';
                 ctx.fillRect(gx - 6, gy - 6, 4, 4);
                 ctx.fillRect(gx + 2, gy - 6, 4, 4);
@@ -2225,7 +2255,7 @@ function CanvasPacman(param) {
                     eatTimer: 0,
                     animFrame: 0
                 };
-                // Reset ghosts with proper release timers
+                // Reset ghosts with proper release timers and positioning
                 ghostsRef.current = [
                     {
                         x: 9,
@@ -2238,7 +2268,7 @@ function CanvasPacman(param) {
                         releaseTimer: 0,
                         frightenedTimer: 0,
                         pauseTimer: 0,
-                        speed: 0.25,
+                        speed: 0.22,
                         cornerTargets: [
                             {
                                 x: 18,
@@ -2258,10 +2288,10 @@ function CanvasPacman(param) {
                         color: '#FFB8FF',
                         originalColor: '#FFB8FF',
                         personalityType: 'PINKY',
-                        releaseTimer: 90,
+                        releaseTimer: 120,
                         frightenedTimer: 0,
                         pauseTimer: 0,
-                        speed: 0.25,
+                        speed: 0.22,
                         cornerTargets: [
                             {
                                 x: 0,
@@ -2281,10 +2311,10 @@ function CanvasPacman(param) {
                         color: '#00FFFF',
                         originalColor: '#00FFFF',
                         personalityType: 'INKY',
-                        releaseTimer: 180,
+                        releaseTimer: 240,
                         frightenedTimer: 0,
                         pauseTimer: 0,
-                        speed: 0.25,
+                        speed: 0.22,
                         cornerTargets: [
                             {
                                 x: 18,
@@ -2304,10 +2334,10 @@ function CanvasPacman(param) {
                         color: '#FFB847',
                         originalColor: '#FFB847',
                         personalityType: 'CLYDE',
-                        releaseTimer: 270,
+                        releaseTimer: 360,
                         frightenedTimer: 0,
                         pauseTimer: 0,
-                        speed: 0.25,
+                        speed: 0.22,
                         cornerTargets: [
                             {
                                 x: 0,
@@ -2473,73 +2503,88 @@ function CanvasPacman(param) {
                 className: "jsx-a58dbfef7be8da39"
             }, void 0, false, {
                 fileName: "[project]/components/CanvasPacman.tsx",
-                lineNumber: 964,
+                lineNumber: 990,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     position: 'absolute',
-                    top: "".concat(-50 * scale, "px"),
+                    top: "".concat(-5, "px"),
                     left: '0',
-                    width: "".concat(containerWidth, "px"),
+                    right: '0',
                     display: 'flex',
-                    justifyContent: 'space-between',
+                    justifyContent: 'center',
                     alignItems: 'center',
-                    padding: "0 ".concat(8 * scale, "px"),
-                    color: '#FFFF00',
-                    fontFamily: 'monospace',
-                    fontSize: "".concat(16 * scale, "px"),
-                    fontWeight: 'bold',
-                    pointerEvents: 'none',
-                    transform: "scale(".concat(scale, ")"),
-                    transformOrigin: 'top left'
+                    zIndex: 10,
+                    pointerEvents: 'none'
                 },
                 className: "jsx-a58dbfef7be8da39",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-a58dbfef7be8da39",
-                        children: [
-                            "Score: ",
-                            score
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/CanvasPacman.tsx",
-                        lineNumber: 996,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-a58dbfef7be8da39",
-                        children: [
-                            "Level: ",
-                            level
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/CanvasPacman.tsx",
-                        lineNumber: 997,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: {
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '4px'
-                        },
-                        className: "jsx-a58dbfef7be8da39",
-                        children: [
-                            "Lives: ",
-                            Array.from({
-                                length: lives
-                            }, (_, i)=>'🧡').join('')
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/CanvasPacman.tsx",
-                        lineNumber: 998,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    style: {
+                        background: 'linear-gradient(135deg, rgba(8, 8, 12, 0.9) 0%, rgba(15, 15, 20, 0.9) 100%)',
+                        border: '2px solid rgba(255, 215, 0, 0.3)',
+                        borderRadius: '12px',
+                        padding: '8px 16px',
+                        backdropFilter: 'blur(8px)',
+                        display: 'flex',
+                        gap: '20px',
+                        alignItems: 'center',
+                        fontSize: "".concat(12 * scale, "px"),
+                        fontFamily: 'monospace',
+                        fontWeight: 'bold',
+                        color: '#FFFF00'
+                    },
+                    className: "jsx-a58dbfef7be8da39",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "jsx-a58dbfef7be8da39",
+                            children: [
+                                "Score: ",
+                                score.toLocaleString()
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/CanvasPacman.tsx",
+                            lineNumber: 1030,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "jsx-a58dbfef7be8da39",
+                            children: [
+                                "Level: ",
+                                level
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/CanvasPacman.tsx",
+                            lineNumber: 1031,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: {
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '4px'
+                            },
+                            className: "jsx-a58dbfef7be8da39",
+                            children: [
+                                "Lives: ",
+                                Array.from({
+                                    length: lives
+                                }, (_, i)=>'🧡').join('')
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/CanvasPacman.tsx",
+                            lineNumber: 1032,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/CanvasPacman.tsx",
+                    lineNumber: 1016,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/CanvasPacman.tsx",
-                lineNumber: 979,
+                lineNumber: 1005,
                 columnNumber: 7
             }, this),
             gameStateRef.current.powerMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2562,7 +2607,7 @@ function CanvasPacman(param) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/CanvasPacman.tsx",
-                lineNumber: 1005,
+                lineNumber: 1040,
                 columnNumber: 9
             }, this),
             isGameOver && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2579,7 +2624,7 @@ function CanvasPacman(param) {
                     color: 'white',
                     fontSize: '24px',
                     fontFamily: 'sans-serif',
-                    zIndex: 9999
+                    zIndex: 10000
                 },
                 className: "jsx-a58dbfef7be8da39",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2590,7 +2635,9 @@ function CanvasPacman(param) {
                         textAlign: 'center',
                         border: '2px solid #FFD700',
                         minWidth: '300px',
-                        position: 'relative'
+                        position: 'relative',
+                        maxWidth: '90vw',
+                        maxHeight: '90vh'
                     },
                     className: "jsx-a58dbfef7be8da39",
                     children: [
@@ -2627,7 +2674,7 @@ function CanvasPacman(param) {
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1045,
+                            lineNumber: 1082,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2639,7 +2686,7 @@ function CanvasPacman(param) {
                             children: "Game Over!"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1076,
+                            lineNumber: 1113,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2661,13 +2708,13 @@ function CanvasPacman(param) {
                                             children: gameStateRef.current.score.toLocaleString()
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasPacman.tsx",
-                                            lineNumber: 1078,
+                                            lineNumber: 1115,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1078,
+                                    lineNumber: 1115,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2682,19 +2729,19 @@ function CanvasPacman(param) {
                                             children: gameStateRef.current.level
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasPacman.tsx",
-                                            lineNumber: 1079,
+                                            lineNumber: 1116,
                                             columnNumber: 35
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1079,
+                                    lineNumber: 1116,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1077,
+                            lineNumber: 1114,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2721,7 +2768,7 @@ function CanvasPacman(param) {
                                     children: "Play Again"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1083,
+                                    lineNumber: 1120,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2739,7 +2786,7 @@ function CanvasPacman(param) {
                                     children: "🐦 Tweet Score"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1098,
+                                    lineNumber: 1135,
                                     columnNumber: 15
                                 }, this),
                                 playerAddress && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2759,13 +2806,13 @@ function CanvasPacman(param) {
                                     children: isPublishing ? '⏳ Publishing...' : '🏆 Publish to Leaderboards'
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1114,
+                                    lineNumber: 1151,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1082,
+                            lineNumber: 1119,
                             columnNumber: 13
                         }, this),
                         isPublishing && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2778,18 +2825,18 @@ function CanvasPacman(param) {
                             children: "Sign the transaction in your wallet to publish your score to the blockchain"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1134,
+                            lineNumber: 1171,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/CanvasPacman.tsx",
-                    lineNumber: 1036,
+                    lineNumber: 1071,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/CanvasPacman.tsx",
-                lineNumber: 1021,
+                lineNumber: 1056,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2799,7 +2846,7 @@ function CanvasPacman(param) {
         ]
     }, void 0, true, {
         fileName: "[project]/components/CanvasPacman.tsx",
-        lineNumber: 963,
+        lineNumber: 989,
         columnNumber: 5
     }, this);
 }
@@ -2919,19 +2966,30 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/styled-jsx/style.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$responsive$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/utils/responsive.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 ;
 ;
 function NavigationHeader(param) {
     let { onHomeClick, onDisconnectWallet, address, isConnected, authed, isOfflineMode } = param;
+    _s();
     const responsiveStyles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$responsive$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getResponsiveStyles"])();
+    const [activeDropdown, setActiveDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const handleMouseEnter = (dropdown)=>{
+        setActiveDropdown(dropdown);
+    };
+    const handleMouseLeave = ()=>{
+        setActiveDropdown(null);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "30552c01d335e0e5",
-                children: ".header-button-hover.jsx-30552c01d335e0e5{transition:all .4s cubic-bezier(.4,0,.2,1)!important}.header-button-hover.jsx-30552c01d335e0e5:hover{background:linear-gradient(135deg,rgba(255,61,20,.3) 0%,rgba(255,61,20,.1) 100%)!important;border:2px solid rgba(255,61,20,.5)!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px rgba(255,61,20,.3)!important}.faucet-button-hover.jsx-30552c01d335e0e5:hover{background:linear-gradient(135deg,rgba(80,255,214,.3) 0%,rgba(80,255,214,.1) 100%)!important;border:2px solid rgba(80,255,214,.5)!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px rgba(80,255,214,.3)!important}.global-button-hover.jsx-30552c01d335e0e5:hover{background:linear-gradient(135deg,rgba(156,163,175,.3) 0%,rgba(156,163,175,.1) 100%)!important;border:2px solid rgba(156,163,175,.5)!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px rgba(156,163,175,.3)!important}.disconnect-button-hover.jsx-30552c01d335e0e5{transition:all .3s!important}.disconnect-button-hover.jsx-30552c01d335e0e5:hover{background:linear-gradient(135deg,rgba(239,68,68,.4) 0%,rgba(239,68,68,.1) 100%)!important;border:1px solid rgba(239,68,68,.5)!important;transform:translateY(-1px)!important;box-shadow:0 2px 10px rgba(239,68,68,.3)!important}.wallet-address-display.jsx-30552c01d335e0e5{transition:all .3s!important}.wallet-address-display.jsx-30552c01d335e0e5:hover{background:linear-gradient(135deg,rgba(80,255,214,.3) 0%,rgba(80,255,214,.1) 100%)!important;border:1px solid rgba(80,255,214,.5)!important;transform:translateY(-1px)!important;box-shadow:0 2px 10px rgba(80,255,214,.3)!important}"
+                id: "c09377d4c3f6be0d",
+                children: ".header-button-hover.jsx-c09377d4c3f6be0d{transition:all .4s cubic-bezier(.4,0,.2,1)!important}.header-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,rgba(255,61,20,.3) 0%,rgba(255,61,20,.1) 100%)!important;border:2px solid rgba(255,61,20,.5)!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px rgba(255,61,20,.3)!important}.faucet-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,rgba(80,255,214,.3) 0%,rgba(80,255,214,.1) 100%)!important;border:2px solid rgba(80,255,214,.5)!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px rgba(80,255,214,.3)!important}.global-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,rgba(156,163,175,.3) 0%,rgba(156,163,175,.1) 100%)!important;border:2px solid rgba(156,163,175,.5)!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px rgba(156,163,175,.3)!important}.dropdown-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,rgba(255,215,0,.3) 0%,rgba(255,215,0,.1) 100%)!important;border:2px solid rgba(255,215,0,.5)!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px rgba(255,215,0,.3)!important}.disconnect-button-hover.jsx-c09377d4c3f6be0d{transition:all .3s!important}.disconnect-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,rgba(239,68,68,.4) 0%,rgba(239,68,68,.1) 100%)!important;border:1px solid rgba(239,68,68,.5)!important;transform:translateY(-1px)!important;box-shadow:0 2px 10px rgba(239,68,68,.3)!important}.wallet-address-display.jsx-c09377d4c3f6be0d{transition:all .3s!important}.wallet-address-display.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,rgba(80,255,214,.3) 0%,rgba(80,255,214,.1) 100%)!important;border:1px solid rgba(80,255,214,.5)!important;transform:translateY(-1px)!important;box-shadow:0 2px 10px rgba(80,255,214,.3)!important}.dropdown-menu.jsx-c09377d4c3f6be0d{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);z-index:1200;background:linear-gradient(135deg,rgba(8,8,12,.95) 0%,rgba(15,15,20,.95) 100%);border:1px solid rgba(255,215,0,.3);border-radius:8px;min-width:150px;margin-top:5px;position:absolute;top:100%;left:0;box-shadow:0 8px 25px rgba(0,0,0,.5)}.dropdown-item.jsx-c09377d4c3f6be0d{color:#e5e7eb;border-bottom:1px solid rgba(255,215,0,.1);padding:10px 16px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;display:block}.dropdown-item.jsx-c09377d4c3f6be0d:last-child{border-bottom:none}.dropdown-item.jsx-c09377d4c3f6be0d:hover{color:gold;background:linear-gradient(135deg,rgba(255,215,0,.2) 0%,rgba(255,215,0,.1) 100%)}"
             }, void 0, false, void 0, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -2950,7 +3008,7 @@ function NavigationHeader(param) {
                     flexWrap: 'wrap',
                     gap: '10px'
                 },
-                className: "jsx-30552c01d335e0e5",
+                className: "jsx-c09377d4c3f6be0d",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
@@ -2958,14 +3016,14 @@ function NavigationHeader(param) {
                             alignItems: 'center',
                             gap: '20px'
                         },
-                        className: "jsx-30552c01d335e0e5",
+                        className: "jsx-c09377d4c3f6be0d",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
                                 display: 'flex',
                                 gap: '16px',
                                 flexWrap: 'wrap'
                             },
-                            className: "jsx-30552c01d335e0e5",
+                            className: "jsx-c09377d4c3f6be0d",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: onHomeClick,
@@ -2981,11 +3039,141 @@ function NavigationHeader(param) {
                                         textTransform: 'uppercase',
                                         letterSpacing: '0.5px'
                                     },
-                                    className: "jsx-30552c01d335e0e5" + " " + "header-button-hover",
+                                    className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover",
                                     children: "Home"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 131,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        position: 'relative'
+                                    },
+                                    onMouseEnter: ()=>handleMouseEnter('375ai'),
+                                    onMouseLeave: handleMouseLeave,
+                                    className: "jsx-c09377d4c3f6be0d",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            style: {
+                                                background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%)',
+                                                border: '2px solid transparent',
+                                                borderRadius: '12px',
+                                                padding: '10px 20px',
+                                                color: '#FFD700',
+                                                fontSize: responsiveStyles.fontSize,
+                                                fontWeight: 600,
+                                                cursor: 'pointer',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.5px'
+                                            },
+                                            className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover dropdown-button-hover",
+                                            children: "What is 375ai? ▼"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                            lineNumber: 155,
+                                            columnNumber: 15
+                                        }, this),
+                                        activeDropdown === '375ai' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-menu",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "https://375.ai/about",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-item",
+                                                    children: "📋 ABOUT"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                                    lineNumber: 174,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "https://x.com/375ai_",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-item",
+                                                    children: "🐦 X (TWITTER)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                                    lineNumber: 182,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                            lineNumber: 173,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                    lineNumber: 150,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        position: 'relative'
+                                    },
+                                    onMouseEnter: ()=>handleMouseEnter('irys'),
+                                    onMouseLeave: handleMouseLeave,
+                                    className: "jsx-c09377d4c3f6be0d",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            style: {
+                                                background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%)',
+                                                border: '2px solid transparent',
+                                                borderRadius: '12px',
+                                                padding: '10px 20px',
+                                                color: '#FFD700',
+                                                fontSize: responsiveStyles.fontSize,
+                                                fontWeight: 600,
+                                                cursor: 'pointer',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.5px'
+                                            },
+                                            className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover dropdown-button-hover",
+                                            children: "What is Irys? ▼"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                            lineNumber: 199,
+                                            columnNumber: 15
+                                        }, this),
+                                        activeDropdown === 'irys' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-menu",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "https://docs.irys.xyz/learn/what/what-irys-is",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-item",
+                                                    children: "📋 ABOUT"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                                    lineNumber: 218,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "https://x.com/irys_xyz",
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-item",
+                                                    children: "🐦 X (TWITTER)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                                    lineNumber: 226,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                            lineNumber: 217,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/layout/NavigationHeader.tsx",
+                                    lineNumber: 194,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3002,11 +3190,11 @@ function NavigationHeader(param) {
                                         textTransform: 'uppercase',
                                         letterSpacing: '0.5px'
                                     },
-                                    className: "jsx-30552c01d335e0e5" + " " + "header-button-hover faucet-button-hover",
+                                    className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover faucet-button-hover",
                                     children: "Faucet"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 238,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3023,22 +3211,22 @@ function NavigationHeader(param) {
                                         textTransform: 'uppercase',
                                         letterSpacing: '0.5px'
                                     },
-                                    className: "jsx-30552c01d335e0e5" + " " + "header-button-hover global-button-hover",
+                                    className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover global-button-hover",
                                     children: "Global Leaderboards"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 256,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/NavigationHeader.tsx",
-                            lineNumber: 84,
+                            lineNumber: 130,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/layout/NavigationHeader.tsx",
-                        lineNumber: 83,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, this),
                     address && isConnected && authed && !isOfflineMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3047,7 +3235,7 @@ function NavigationHeader(param) {
                             alignItems: 'center',
                             gap: '12px'
                         },
-                        className: "jsx-30552c01d335e0e5",
+                        className: "jsx-c09377d4c3f6be0d",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
@@ -3067,7 +3255,7 @@ function NavigationHeader(param) {
                                     navigator.clipboard.writeText(address);
                                 // You could add a toast notification here
                                 },
-                                className: "jsx-30552c01d335e0e5" + " " + "wallet-address-display",
+                                className: "jsx-c09377d4c3f6be0d" + " " + "wallet-address-display",
                                 children: [
                                     address.slice(0, 6),
                                     "...",
@@ -3075,7 +3263,7 @@ function NavigationHeader(param) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                lineNumber: 144,
+                                lineNumber: 279,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3092,28 +3280,29 @@ function NavigationHeader(param) {
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.5px'
                                 },
-                                className: "jsx-30552c01d335e0e5" + " " + "disconnect-button-hover",
+                                className: "jsx-c09377d4c3f6be0d" + " " + "disconnect-button-hover",
                                 children: "Disconnect"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                lineNumber: 166,
+                                lineNumber: 301,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/layout/NavigationHeader.tsx",
-                        lineNumber: 143,
+                        lineNumber: 278,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/layout/NavigationHeader.tsx",
-                lineNumber: 67,
+                lineNumber: 113,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
+_s(NavigationHeader, "pyF5VtWcSG89rmb2hon8MXMhBCg=");
 _c = NavigationHeader;
 var _c;
 __turbopack_context__.k.register(_c, "NavigationHeader");
@@ -3763,20 +3952,20 @@ function GameCarousel(param) {
         background: 'linear-gradient(135deg, #FF3D14 0%, #50FFD6 100%)',
         border: 'none',
         borderRadius: '12px',
-        padding: '16px 32px',
+        padding: '14px 28px',
         color: 'white',
         fontSize: responsiveStyles.fontSize,
         fontWeight: '600',
         cursor: 'pointer',
         transition: 'all 0.2s',
         boxShadow: '0 4px 15px rgba(80, 255, 214, 0.4)',
-        minWidth: '200px'
+        minWidth: '180px'
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "78a140f9cbc2acab",
-                children: ".carousel-transition.jsx-78a140f9cbc2acab{transition:all .8s cubic-bezier(.25,.46,.45,.94)!important}.carousel-game-center.jsx-78a140f9cbc2acab,.carousel-game-side.jsx-78a140f9cbc2acab{flex-direction:column;justify-content:center;align-items:center;display:flex;height:450px!important}@media (max-width:768px){.carousel-container.jsx-78a140f9cbc2acab{flex-direction:column!important;gap:20px!important}.carousel-game-center.jsx-78a140f9cbc2acab,.carousel-game-side.jsx-78a140f9cbc2acab{min-width:250px!important;max-width:280px!important;height:350px!important}}@media (min-width:481px) and (max-width:768px){.tablet-adjustments.jsx-78a140f9cbc2acab{transform:scale(.5)!important}.carousel-game-center.jsx-78a140f9cbc2acab,.carousel-game-side.jsx-78a140f9cbc2acab{min-width:200px!important;max-width:220px!important;height:180px!important}}@keyframes pulse{0%,to{transform:scale(1.05)}50%{transform:scale(1.1)}}"
+                id: "93efdeb5722ddeb6",
+                children: ".carousel-transition.jsx-93efdeb5722ddeb6{transition:all .8s cubic-bezier(.25,.46,.45,.94)!important}.carousel-game-center.jsx-93efdeb5722ddeb6,.carousel-game-side.jsx-93efdeb5722ddeb6{text-align:center;flex-direction:row;justify-content:center;align-items:center;gap:20px;display:flex;height:180px!important;padding:20px!important}@media (max-width:768px){.carousel-container.jsx-93efdeb5722ddeb6{flex-direction:column!important;gap:15px!important}.carousel-game-center.jsx-93efdeb5722ddeb6,.carousel-game-side.jsx-93efdeb5722ddeb6{gap:15px;min-width:280px!important;max-width:320px!important;height:140px!important;padding:15px!important}}@media (min-width:481px) and (max-width:768px){.tablet-adjustments.jsx-93efdeb5722ddeb6{transform:scale(.9)!important}.carousel-game-center.jsx-93efdeb5722ddeb6,.carousel-game-side.jsx-93efdeb5722ddeb6{min-width:320px!important;max-width:360px!important;height:160px!important}}@keyframes pulse{0%,to{transform:scale(1.02)}50%{transform:scale(1.05)}}"
             }, void 0, false, void 0, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -3785,62 +3974,61 @@ function GameCarousel(param) {
                     alignItems: 'center',
                     justifyContent: 'center',
                     position: 'relative',
-                    minHeight: '400px'
+                    minHeight: '220px'
                 },
-                className: "jsx-78a140f9cbc2acab" + " " + "carousel-container tablet-adjustments",
+                className: "jsx-93efdeb5722ddeb6" + " " + "carousel-container tablet-adjustments",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: handleCarouselPrev,
                         style: {
                             position: 'absolute',
-                            left: '50px',
+                            left: '30px',
                             zIndex: 10,
                             background: 'rgba(255, 61, 20, 0.2)',
                             border: '2px solid rgba(255, 61, 20, 0.5)',
                             borderRadius: '50%',
-                            width: '60px',
-                            height: '60px',
+                            width: '50px',
+                            height: '50px',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             cursor: 'pointer',
-                            fontSize: '24px',
+                            fontSize: '20px',
                             color: '#FF3D14',
                             transition: 'all 0.3s ease'
                         },
-                        className: "jsx-78a140f9cbc2acab",
+                        className: "jsx-93efdeb5722ddeb6",
                         children: "←"
                     }, void 0, false, {
                         fileName: "[project]/components/ui/GameCarousel.tsx",
-                        lineNumber: 100,
+                        lineNumber: 109,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
                             ...cardStyle,
-                            minWidth: '280px',
-                            maxWidth: '300px',
-                            height: showPaymentButtons ? '450px' : '360px',
+                            minWidth: '300px',
+                            maxWidth: '400px',
+                            height: showPaymentButtons ? '180px' : '160px',
                             opacity: 0.4,
                             filter: 'blur(2px)',
                             border: '2px solid rgba(255, 61, 20, 0.4)',
                             boxShadow: '0 25px 50px -12px rgba(255, 61, 20, 0.3)',
-                            transform: 'scale(0.8)',
+                            transform: 'scale(0.85)',
                             pointerEvents: 'none'
                         },
-                        className: "jsx-78a140f9cbc2acab" + " " + "carousel-game-side carousel-transition",
+                        className: "jsx-93efdeb5722ddeb6" + " " + "carousel-game-side carousel-transition",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    width: '80px',
-                                    height: '80px',
+                                    width: '60px',
+                                    height: '60px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    marginBottom: '20px',
-                                    margin: '0 auto 20px auto'
+                                    flexShrink: 0
                                 },
-                                className: "jsx-78a140f9cbc2acab",
+                                className: "jsx-93efdeb5722ddeb6",
                                 children: leftGame.icon.startsWith('/') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: leftGame.icon,
                                     alt: leftGame.name,
@@ -3849,71 +4037,95 @@ function GameCarousel(param) {
                                         maxHeight: '100%',
                                         objectFit: 'contain'
                                     },
-                                    className: "jsx-78a140f9cbc2acab"
+                                    className: "jsx-93efdeb5722ddeb6"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/GameCarousel.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 153,
                                     columnNumber: 14
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
-                                        fontSize: '76px',
+                                        fontSize: '56px',
                                         lineHeight: 1
                                     },
-                                    className: "jsx-78a140f9cbc2acab",
+                                    className: "jsx-93efdeb5722ddeb6",
                                     children: leftGame.icon
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/GameCarousel.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 155,
                                     columnNumber: 14
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/GameCarousel.tsx",
-                                lineNumber: 135,
+                                lineNumber: 144,
                                 columnNumber: 10
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    color: '#9CA3AF',
-                                    margin: 0,
-                                    fontSize: '28px',
+                                    flex: 1,
                                     textAlign: 'center'
                                 },
-                                className: "jsx-78a140f9cbc2acab",
-                                children: leftGame.name
-                            }, void 0, false, {
+                                className: "jsx-93efdeb5722ddeb6",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        style: {
+                                            color: '#9CA3AF',
+                                            margin: '0 0 8px 0',
+                                            fontSize: '20px'
+                                        },
+                                        className: "jsx-93efdeb5722ddeb6",
+                                        children: leftGame.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/GameCarousel.tsx",
+                                        lineNumber: 159,
+                                        columnNumber: 12
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        style: {
+                                            color: '#666',
+                                            fontSize: '12px',
+                                            margin: 0
+                                        },
+                                        className: "jsx-93efdeb5722ddeb6",
+                                        children: leftGame.description
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/GameCarousel.tsx",
+                                        lineNumber: 160,
+                                        columnNumber: 12
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/components/ui/GameCarousel.tsx",
-                                lineNumber: 150,
+                                lineNumber: 158,
                                 columnNumber: 10
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/GameCarousel.tsx",
-                        lineNumber: 123,
+                        lineNumber: 132,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
                             ...cardStyle,
-                            minWidth: '400px',
-                            maxWidth: '440px',
-                            height: showPaymentButtons ? '450px' : '360px',
+                            minWidth: '500px',
+                            maxWidth: '600px',
+                            height: showPaymentButtons ? '180px' : '160px',
                             border: "3px solid ".concat(currentGame.borderColor),
                             boxShadow: "0 25px 50px -12px ".concat(currentGame.borderColor, "40"),
-                            transform: 'scale(1.05)'
+                            transform: 'scale(1.0)'
                         },
-                        className: "jsx-78a140f9cbc2acab" + " " + "carousel-game-center carousel-transition",
+                        className: "jsx-93efdeb5722ddeb6" + " " + "carousel-game-center carousel-transition",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    width: showPaymentButtons ? '100px' : '120px',
-                                    height: showPaymentButtons ? '100px' : '120px',
+                                    width: showPaymentButtons ? '80px' : '90px',
+                                    height: showPaymentButtons ? '80px' : '90px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    marginBottom: showPaymentButtons ? '25px' : '16px',
-                                    margin: "0 auto ".concat(showPaymentButtons ? '25px' : '16px', " auto")
+                                    flexShrink: 0
                                 },
-                                className: "jsx-78a140f9cbc2acab",
+                                className: "jsx-93efdeb5722ddeb6",
                                 children: currentGame.icon.startsWith('/') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: currentGame.icon,
                                     alt: currentGame.name,
@@ -3922,172 +4134,173 @@ function GameCarousel(param) {
                                         maxHeight: '100%',
                                         objectFit: 'contain'
                                     },
-                                    className: "jsx-78a140f9cbc2acab"
+                                    className: "jsx-93efdeb5722ddeb6"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/GameCarousel.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 182,
                                     columnNumber: 14
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
-                                        fontSize: showPaymentButtons ? '96px' : '110px',
+                                        fontSize: showPaymentButtons ? '76px' : '86px',
                                         lineHeight: 1
                                     },
-                                    className: "jsx-78a140f9cbc2acab",
+                                    className: "jsx-93efdeb5722ddeb6",
                                     children: currentGame.icon
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/GameCarousel.tsx",
-                                    lineNumber: 174,
+                                    lineNumber: 184,
                                     columnNumber: 14
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/GameCarousel.tsx",
-                                lineNumber: 162,
+                                lineNumber: 173,
                                 columnNumber: 10
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    fontSize: showPaymentButtons ? '32px' : '36px',
-                                    marginBottom: '15px',
-                                    color: currentGame.borderColor,
-                                    fontWeight: 700,
-                                    textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-                                    textAlign: 'center'
+                                    flex: 1,
+                                    textAlign: 'center',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    paddingLeft: '20px'
                                 },
-                                className: "jsx-78a140f9cbc2acab",
-                                children: currentGame.name
-                            }, void 0, false, {
-                                fileName: "[project]/components/ui/GameCarousel.tsx",
-                                lineNumber: 177,
-                                columnNumber: 10
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                style: {
-                                    marginBottom: showPaymentButtons ? '20px' : '30px',
-                                    color: '#9CA3AF',
-                                    fontSize: responsiveStyles.fontSize,
-                                    textAlign: 'center'
-                                },
-                                className: "jsx-78a140f9cbc2acab",
-                                children: currentGame.description
-                            }, void 0, false, {
+                                className: "jsx-93efdeb5722ddeb6",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        style: {
+                                            fontSize: showPaymentButtons ? '24px' : '28px',
+                                            marginBottom: '8px',
+                                            color: currentGame.borderColor,
+                                            fontWeight: 700,
+                                            textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                                        },
+                                        className: "jsx-93efdeb5722ddeb6",
+                                        children: currentGame.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/GameCarousel.tsx",
+                                        lineNumber: 188,
+                                        columnNumber: 12
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        style: {
+                                            marginBottom: showPaymentButtons ? '15px' : '20px',
+                                            color: '#9CA3AF',
+                                            fontSize: '14px'
+                                        },
+                                        className: "jsx-93efdeb5722ddeb6",
+                                        children: currentGame.description
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/GameCarousel.tsx",
+                                        lineNumber: 197,
+                                        columnNumber: 12
+                                    }, this),
+                                    currentGame.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '10px',
+                                            alignItems: 'center'
+                                        },
+                                        className: "jsx-93efdeb5722ddeb6",
+                                        children: !showPaymentButtons ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    style: {
+                                                        ...buttonStyle,
+                                                        animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                                                    },
+                                                    onClick: onWalletConnection,
+                                                    className: "jsx-93efdeb5722ddeb6",
+                                                    children: "🔗 Connect Wallet & Play"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/ui/GameCarousel.tsx",
+                                                    lineNumber: 205,
+                                                    columnNumber: 20
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    style: {
+                                                        background: 'rgba(25, 25, 35, 0.5)',
+                                                        border: '2px solid rgba(107, 114, 128, 0.3)',
+                                                        borderRadius: '12px',
+                                                        padding: '10px 20px',
+                                                        color: '#9CA3AF',
+                                                        fontSize: '12px',
+                                                        fontWeight: 500,
+                                                        cursor: 'pointer',
+                                                        transition: 'all 0.2s',
+                                                        minWidth: '140px'
+                                                    },
+                                                    onClick: ()=>onOfflinePlay(currentGame.id),
+                                                    className: "jsx-93efdeb5722ddeb6",
+                                                    children: "Just Play"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/ui/GameCarousel.tsx",
+                                                    lineNumber: 211,
+                                                    columnNumber: 20
+                                                }, this)
+                                            ]
+                                        }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            style: {
+                                                ...buttonStyle,
+                                                animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                                                ...isProcessingPayment ? {
+                                                    opacity: 0.7,
+                                                    cursor: 'not-allowed'
+                                                } : {}
+                                            },
+                                            onClick: ()=>onGameSelect(currentGame.id),
+                                            disabled: isProcessingPayment,
+                                            className: "jsx-93efdeb5722ddeb6",
+                                            children: isProcessingPayment ? '⏳ Processing...' : "Play ".concat(currentGame.name)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/ui/GameCarousel.tsx",
+                                            lineNumber: 230,
+                                            columnNumber: 18
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/GameCarousel.tsx",
+                                        lineNumber: 202,
+                                        columnNumber: 14
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/components/ui/GameCarousel.tsx",
                                 lineNumber: 187,
                                 columnNumber: 10
-                            }, this),
-                            currentGame.id && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                style: {
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    gap: '15px',
-                                    alignItems: 'center'
-                                },
-                                className: "jsx-78a140f9cbc2acab",
-                                children: !showPaymentButtons ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            style: {
-                                                ...buttonStyle,
-                                                animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
-                                            },
-                                            onClick: onWalletConnection,
-                                            className: "jsx-78a140f9cbc2acab",
-                                            children: "🔗 Connect Wallet & Play"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ui/GameCarousel.tsx",
-                                            lineNumber: 195,
-                                            columnNumber: 18
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            style: {
-                                                fontSize: '13px',
-                                                color: '#9CA3AF',
-                                                margin: '10px 0 5px',
-                                                textAlign: 'center'
-                                            },
-                                            className: "jsx-78a140f9cbc2acab",
-                                            children: "Don't want to connect your wallet and publish your scores? No worries!"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ui/GameCarousel.tsx",
-                                            lineNumber: 201,
-                                            columnNumber: 18
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            style: {
-                                                background: 'rgba(25, 25, 35, 0.5)',
-                                                border: '2px solid rgba(107, 114, 128, 0.3)',
-                                                borderRadius: '12px',
-                                                padding: '12px 24px',
-                                                color: '#9CA3AF',
-                                                fontSize: '14px',
-                                                fontWeight: 500,
-                                                cursor: 'pointer',
-                                                transition: 'all 0.2s',
-                                                minWidth: '200px'
-                                            },
-                                            onClick: ()=>onOfflinePlay(currentGame.id),
-                                            className: "jsx-78a140f9cbc2acab",
-                                            children: "Just Play"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/ui/GameCarousel.tsx",
-                                            lineNumber: 204,
-                                            columnNumber: 18
-                                        }, this)
-                                    ]
-                                }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    style: {
-                                        ...buttonStyle,
-                                        animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                                        ...isProcessingPayment ? {
-                                            opacity: 0.7,
-                                            cursor: 'not-allowed'
-                                        } : {}
-                                    },
-                                    onClick: ()=>onGameSelect(currentGame.id),
-                                    disabled: isProcessingPayment,
-                                    className: "jsx-78a140f9cbc2acab",
-                                    children: isProcessingPayment ? '⏳ Processing...' : "Play ".concat(currentGame.name)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/ui/GameCarousel.tsx",
-                                    lineNumber: 223,
-                                    columnNumber: 16
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/components/ui/GameCarousel.tsx",
-                                lineNumber: 192,
-                                columnNumber: 12
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/GameCarousel.tsx",
-                        lineNumber: 153,
+                        lineNumber: 164,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
                             ...cardStyle,
-                            minWidth: '280px',
-                            maxWidth: '300px',
-                            height: showPaymentButtons ? '450px' : '360px',
+                            minWidth: '300px',
+                            maxWidth: '400px',
+                            height: showPaymentButtons ? '180px' : '160px',
                             opacity: 0.4,
                             filter: 'blur(2px)',
                             border: '2px solid rgba(255, 61, 20, 0.4)',
                             boxShadow: '0 25px 50px -12px rgba(255, 61, 20, 0.3)',
-                            transform: 'scale(0.8)',
+                            transform: 'scale(0.85)',
                             pointerEvents: 'none'
                         },
-                        className: "jsx-78a140f9cbc2acab" + " " + "carousel-game-side carousel-transition",
+                        className: "jsx-93efdeb5722ddeb6" + " " + "carousel-game-side carousel-transition",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    width: '80px',
-                                    height: '80px',
+                                    width: '60px',
+                                    height: '60px',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    marginBottom: '20px',
-                                    margin: '0 auto 20px auto'
+                                    flexShrink: 0
                                 },
-                                className: "jsx-78a140f9cbc2acab",
+                                className: "jsx-93efdeb5722ddeb6",
                                 children: rightGame.icon.startsWith('/') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: rightGame.icon,
                                     alt: rightGame.name,
@@ -4096,78 +4309,103 @@ function GameCarousel(param) {
                                         maxHeight: '100%',
                                         objectFit: 'contain'
                                     },
-                                    className: "jsx-78a140f9cbc2acab"
+                                    className: "jsx-93efdeb5722ddeb6"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/GameCarousel.tsx",
-                                    lineNumber: 261,
+                                    lineNumber: 268,
                                     columnNumber: 14
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     style: {
-                                        fontSize: '76px',
+                                        fontSize: '56px',
                                         lineHeight: 1
                                     },
-                                    className: "jsx-78a140f9cbc2acab",
+                                    className: "jsx-93efdeb5722ddeb6",
                                     children: rightGame.icon
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/GameCarousel.tsx",
-                                    lineNumber: 263,
+                                    lineNumber: 270,
                                     columnNumber: 14
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/GameCarousel.tsx",
-                                lineNumber: 251,
+                                lineNumber: 259,
                                 columnNumber: 10
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
-                                    color: '#9CA3AF',
-                                    margin: 0,
-                                    fontSize: '28px',
+                                    flex: 1,
                                     textAlign: 'center'
                                 },
-                                className: "jsx-78a140f9cbc2acab",
-                                children: rightGame.name
-                            }, void 0, false, {
+                                className: "jsx-93efdeb5722ddeb6",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        style: {
+                                            color: '#9CA3AF',
+                                            margin: '0 0 8px 0',
+                                            fontSize: '20px'
+                                        },
+                                        className: "jsx-93efdeb5722ddeb6",
+                                        children: rightGame.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/GameCarousel.tsx",
+                                        lineNumber: 274,
+                                        columnNumber: 12
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        style: {
+                                            color: '#666',
+                                            fontSize: '12px',
+                                            margin: 0
+                                        },
+                                        className: "jsx-93efdeb5722ddeb6",
+                                        children: rightGame.description
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ui/GameCarousel.tsx",
+                                        lineNumber: 275,
+                                        columnNumber: 12
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/components/ui/GameCarousel.tsx",
-                                lineNumber: 266,
+                                lineNumber: 273,
                                 columnNumber: 10
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/GameCarousel.tsx",
-                        lineNumber: 239,
+                        lineNumber: 247,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: handleCarouselNext,
                         style: {
                             position: 'absolute',
-                            right: '50px',
+                            right: '30px',
                             zIndex: 10,
                             background: 'rgba(255, 61, 20, 0.2)',
                             border: '2px solid rgba(255, 61, 20, 0.5)',
                             borderRadius: '50%',
-                            width: '60px',
-                            height: '60px',
+                            width: '50px',
+                            height: '50px',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             cursor: 'pointer',
-                            fontSize: '24px',
+                            fontSize: '20px',
                             color: '#FF3D14',
                             transition: 'all 0.3s ease'
                         },
-                        className: "jsx-78a140f9cbc2acab",
+                        className: "jsx-93efdeb5722ddeb6",
                         children: "→"
                     }, void 0, false, {
                         fileName: "[project]/components/ui/GameCarousel.tsx",
-                        lineNumber: 269,
+                        lineNumber: 279,
                         columnNumber: 8
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/ui/GameCarousel.tsx",
-                lineNumber: 92,
+                lineNumber: 101,
                 columnNumber: 6
             }, this)
         ]
@@ -5266,37 +5504,37 @@ function Page() {
         let availableHeight = height - headerHeight - footerHeight;
         let availableWidth = width;
         // Scale everything based on available space
-        let titleScale = 1;
+        let titleScale = 0.7; // Reduced from previous sizes
         let carouselScale = 1;
-        let carouselHeight = 450;
-        let carouselWidth = 400;
+        let carouselHeight = 220; // Reduced height for horizontal layout
+        let carouselWidth = 600;
         let gameScale = 1;
         // Very small screens (tablets in portrait)
         if (width < 768) {
-            titleScale = 0.6;
-            carouselScale = 0.7;
-            carouselHeight = 320;
-            carouselWidth = 280;
+            titleScale = 0.5;
+            carouselScale = 0.8;
+            carouselHeight = 180;
+            carouselWidth = 320;
             gameScale = 0.8;
             headerHeight = 60;
             footerHeight = 50;
         } else if (width < 1024) {
-            titleScale = 0.7;
-            carouselScale = 0.8;
-            carouselHeight = 380;
-            carouselWidth = 320;
+            titleScale = 0.6;
+            carouselScale = 0.9;
+            carouselHeight = 200;
+            carouselWidth = 500;
             gameScale = 0.9;
         } else if (width < 1366) {
-            titleScale = 0.8;
-            carouselScale = 0.9;
-            carouselHeight = 420;
-            carouselWidth = 360;
+            titleScale = 0.65;
+            carouselScale = 0.95;
+            carouselHeight = 210;
+            carouselWidth = 550;
             gameScale = 0.95;
         } else if (width >= 1920) {
-            titleScale = 1.2;
+            titleScale = 0.8;
             carouselScale = 1.1;
-            carouselHeight = 500;
-            carouselWidth = 440;
+            carouselHeight = 240;
+            carouselWidth = 650;
             gameScale = 1.1;
         }
         // Height-based adjustments
@@ -5562,15 +5800,15 @@ function Page() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                transform: "scale(".concat(responsiveConfig.titleScale, ")"),
-                                marginBottom: "".concat(20 * responsiveConfig.titleScale, "px"),
+                                transform: "scale(".concat(responsiveConfig.titleScale * 1.5, ")"),
+                                marginBottom: "".concat(30 * responsiveConfig.titleScale, "px"),
                                 transformOrigin: 'center center'
                             },
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "/arcade-title.png",
                                 alt: "375 Arcade - Built on Irys",
                                 style: {
-                                    maxWidth: '400px',
+                                    maxWidth: '350px',
                                     width: '100%',
                                     height: 'auto',
                                     filter: 'drop-shadow(0 8px 16px rgba(255, 61, 20, 0.3))'
@@ -5735,15 +5973,15 @@ function Page() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                transform: "scale(".concat(responsiveConfig.titleScale, ")"),
-                                marginBottom: "".concat(20 * responsiveConfig.titleScale, "px"),
+                                transform: "scale(".concat(responsiveConfig.titleScale * 1.5, ")"),
+                                marginBottom: "".concat(30 * responsiveConfig.titleScale, "px"),
                                 transformOrigin: 'center center'
                             },
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 src: "/arcade-title.png",
                                 alt: "375 Arcade - Built on Irys",
                                 style: {
-                                    maxWidth: '400px',
+                                    maxWidth: '350px',
                                     width: '100%',
                                     height: 'auto',
                                     filter: 'drop-shadow(0 8px 16px rgba(255, 61, 20, 0.3))'
@@ -5812,24 +6050,34 @@ function Page() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         position: 'absolute',
-                        top: "".concat(responsiveConfig.headerHeight + 10, "px"),
-                        left: "".concat(responsiveConfig.padding, "px"),
-                        zIndex: 1000,
-                        transform: "scale(".concat(responsiveConfig.titleScale * 0.8, ")"),
-                        transformOrigin: 'top left'
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        zIndex: 1000
                     },
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                        src: "/arcade-title.png",
-                        alt: "375 Arcade - Built on Irys",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            maxWidth: '400px',
-                            width: '100%',
-                            height: 'auto',
-                            filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
-                        }
+                            transform: "scale(".concat(responsiveConfig.titleScale * 0.8, ")"),
+                            transformOrigin: 'center center',
+                            marginBottom: '30px'
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: "/arcade-title.png",
+                            alt: "375 Arcade - Built on Irys",
+                            style: {
+                                maxWidth: '300px',
+                                width: '100%',
+                                height: 'auto',
+                                filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
+                            }
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 579,
+                            columnNumber: 13
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 575,
+                        lineNumber: 574,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
@@ -5846,7 +6094,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 587,
+                    lineNumber: 592,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5859,7 +6107,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 595,
+                    lineNumber: 600,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$GameReadyScreen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5868,12 +6116,12 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 604,
+                    lineNumber: 609,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 609,
+                    lineNumber: 614,
                     columnNumber: 9
                 }, this)
             ]
@@ -5892,35 +6140,44 @@ function Page() {
                     children: mobileStyles
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 618,
+                    lineNumber: 623,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         position: 'absolute',
-                        top: "".concat(responsiveConfig.headerHeight + 10, "px"),
-                        left: "".concat(responsiveConfig.padding, "px"),
-                        zIndex: 1000,
-                        transform: "scale(".concat(responsiveConfig.titleScale * 0.7, ")"),
-                        transformOrigin: 'top left'
+                        top: '20px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        zIndex: 1000
                     },
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                        src: "/arcade-title.png",
-                        alt: "375 Arcade - Built on Irys",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            maxWidth: '400px',
-                            width: '100%',
-                            height: 'auto',
-                            filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
-                        }
+                            transform: "scale(".concat(responsiveConfig.titleScale * 0.6, ")"),
+                            transformOrigin: 'center center'
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: "/arcade-title.png",
+                            alt: "375 Arcade - Built on Irys",
+                            style: {
+                                maxWidth: '250px',
+                                width: '100%',
+                                height: 'auto',
+                                filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
+                            }
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 635,
+                            columnNumber: 13
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 627,
+                        lineNumber: 631,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 619,
+                    lineNumber: 624,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5932,7 +6189,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 639,
+                    lineNumber: 648,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5945,13 +6202,13 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 647,
+                    lineNumber: 656,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         position: 'absolute',
-                        top: "".concat(responsiveConfig.headerHeight, "px"),
+                        top: "".concat(responsiveConfig.headerHeight + 60, "px"),
                         left: 0,
                         right: 0,
                         bottom: "".concat(responsiveConfig.footerHeight, "px"),
@@ -5976,12 +6233,12 @@ function Page() {
                             playerAddress: isOfflineMode ? undefined : address
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 672,
+                            lineNumber: 681,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 668,
+                        lineNumber: 677,
                         columnNumber: 13
                     }, this) : selectedGame === 'pacman' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
@@ -5999,28 +6256,28 @@ function Page() {
                             playerAddress: isOfflineMode ? undefined : address
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 688,
+                            lineNumber: 697,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 684,
+                        lineNumber: 693,
                         columnNumber: 13
                     }, this) : null
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 656,
+                    lineNumber: 665,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 701,
+                    lineNumber: 710,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 617,
+            lineNumber: 622,
             columnNumber: 7
         }, this);
     }
@@ -6032,7 +6289,7 @@ function Page() {
                 children: mobileStyles
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 709,
+                lineNumber: 718,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -6044,7 +6301,7 @@ function Page() {
                 isOfflineMode: isOfflineMode
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 710,
+                lineNumber: 719,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -6057,7 +6314,7 @@ function Page() {
                 address: address
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 718,
+                lineNumber: 727,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6093,7 +6350,7 @@ function Page() {
                             children: "🔄"
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 750,
+                            lineNumber: 759,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -6103,7 +6360,7 @@ function Page() {
                             children: "Loading..."
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 751,
+                            lineNumber: 760,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6113,29 +6370,29 @@ function Page() {
                             children: "Initializing 375 Arcade..."
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 752,
+                            lineNumber: 761,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 739,
+                    lineNumber: 748,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 728,
+                lineNumber: 737,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 756,
+                lineNumber: 765,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 708,
+        lineNumber: 717,
         columnNumber: 5
     }, this);
 }

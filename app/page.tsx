@@ -144,44 +144,44 @@ export default function Page() {
     let availableWidth = width;
     
     // Scale everything based on available space
-    let titleScale = 1;
+    let titleScale = 0.7; // Reduced from previous sizes
     let carouselScale = 1;
-    let carouselHeight = 450;
-    let carouselWidth = 400;
+    let carouselHeight = 220; // Reduced height for horizontal layout
+    let carouselWidth = 600;
     let gameScale = 1;
     
     // Very small screens (tablets in portrait)
     if (width < 768) {
-      titleScale = 0.6;
-      carouselScale = 0.7;
-      carouselHeight = 320;
-      carouselWidth = 280;
+      titleScale = 0.5;
+      carouselScale = 0.8;
+      carouselHeight = 180;
+      carouselWidth = 320;
       gameScale = 0.8;
       headerHeight = 60;
       footerHeight = 50;
     }
     // Medium screens (tablets in landscape, small laptops)
     else if (width < 1024) {
-      titleScale = 0.7;
-      carouselScale = 0.8;
-      carouselHeight = 380;
-      carouselWidth = 320;
+      titleScale = 0.6;
+      carouselScale = 0.9;
+      carouselHeight = 200;
+      carouselWidth = 500;
       gameScale = 0.9;
     }
     // Small laptops
     else if (width < 1366) {
-      titleScale = 0.8;
-      carouselScale = 0.9;
-      carouselHeight = 420;
-      carouselWidth = 360;
+      titleScale = 0.65;
+      carouselScale = 0.95;
+      carouselHeight = 210;
+      carouselWidth = 550;
       gameScale = 0.95;
     }
     // Large screens
     else if (width >= 1920) {
-      titleScale = 1.2;
+      titleScale = 0.8;
       carouselScale = 1.1;
-      carouselHeight = 500;
-      carouselWidth = 440;
+      carouselHeight = 240;
+      carouselWidth = 650;
       gameScale = 1.1;
     }
     
@@ -421,15 +421,15 @@ export default function Page() {
           overflow: 'hidden'
         }}>
           <div style={{
-            transform: `scale(${responsiveConfig.titleScale})`,
-            marginBottom: `${20 * responsiveConfig.titleScale}px`,
+            transform: `scale(${responsiveConfig.titleScale * 1.5})`, // 50% bigger total (30% + 20% more)
+            marginBottom: `${30 * responsiveConfig.titleScale}px`,
             transformOrigin: 'center center'
           }}>
             <img
               src="/arcade-title.png"
               alt="375 Arcade - Built on Irys"
               style={{
-                maxWidth: '400px',
+                maxWidth: '350px',
                 width: '100%',
                 height: 'auto',
                 filter: 'drop-shadow(0 8px 16px rgba(255, 61, 20, 0.3))'
@@ -524,15 +524,15 @@ export default function Page() {
           overflow: 'hidden'
         }}>
           <div style={{
-            transform: `scale(${responsiveConfig.titleScale})`,
-            marginBottom: `${20 * responsiveConfig.titleScale}px`,
+            transform: `scale(${responsiveConfig.titleScale * 1.5})`, // 50% bigger total (30% + 20% more)
+            marginBottom: `${30 * responsiveConfig.titleScale}px`,
             transformOrigin: 'center center'
           }}>
             <img
               src="/arcade-title.png"
               alt="375 Arcade - Built on Irys"
               style={{
-                maxWidth: '400px',
+                maxWidth: '350px',
                 width: '100%',
                 height: 'auto',
                 filter: 'drop-shadow(0 8px 16px rgba(255, 61, 20, 0.3))'
@@ -566,22 +566,27 @@ export default function Page() {
         <style>{mobileStyles}</style>
         <div style={{
           position: 'absolute',
-          top: `${responsiveConfig.headerHeight + 10}px`,
-          left: `${responsiveConfig.padding}px`,
-          zIndex: 1000,
-          transform: `scale(${responsiveConfig.titleScale * 0.8})`,
-          transformOrigin: 'top left'
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          zIndex: 1000
         }}>
-          <img
-            src="/arcade-title.png"
-            alt="375 Arcade - Built on Irys"
-            style={{
-              maxWidth: '400px',
-              width: '100%',
-              height: 'auto',
-              filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
-            }}
-          />
+          <div style={{
+            transform: `scale(${responsiveConfig.titleScale * 0.8})`,
+            transformOrigin: 'center center',
+            marginBottom: '30px'
+          }}>
+            <img
+              src="/arcade-title.png"
+              alt="375 Arcade - Built on Irys"
+              style={{
+                maxWidth: '300px',
+                width: '100%',
+                height: 'auto',
+                filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
+              }}
+            />
+          </div>
         </div>
 
         <NavigationHeader 
@@ -618,22 +623,26 @@ export default function Page() {
         <style>{mobileStyles}</style>
         <div style={{
           position: 'absolute',
-          top: `${responsiveConfig.headerHeight + 10}px`,
-          left: `${responsiveConfig.padding}px`,
-          zIndex: 1000,
-          transform: `scale(${responsiveConfig.titleScale * 0.7})`,
-          transformOrigin: 'top left'
+          top: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 1000
         }}>
-          <img
-            src="/arcade-title.png"
-            alt="375 Arcade - Built on Irys"
-            style={{
-              maxWidth: '400px',
-              width: '100%',
-              height: 'auto',
-              filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
-            }}
-          />
+          <div style={{
+            transform: `scale(${responsiveConfig.titleScale * 0.6})`,
+            transformOrigin: 'center center'
+          }}>
+            <img
+              src="/arcade-title.png"
+              alt="375 Arcade - Built on Irys"
+              style={{
+                maxWidth: '250px',
+                width: '100%',
+                height: 'auto',
+                filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
+              }}
+            />
+          </div>
         </div>
 
         <NavigationHeader 
@@ -655,7 +664,7 @@ export default function Page() {
         />
         <div style={{
           position: 'absolute',
-          top: `${responsiveConfig.headerHeight}px`,
+          top: `${responsiveConfig.headerHeight + 60}px`,
           left: 0,
           right: 0,
           bottom: `${responsiveConfig.footerHeight}px`,

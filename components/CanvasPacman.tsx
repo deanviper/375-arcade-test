@@ -1,4 +1,4 @@
-'use client';
+// Reset ghosts with proper release'use client';
 
 import { useRef, useEffect, useState } from 'react';
 
@@ -40,7 +40,7 @@ type Ghost = {
   x: number;
   y: number;
   dir: Direction;
-  mode: 'CAGE' | 'CHASE' | 'SCATTER' | 'FRIGHTENED' | 'EATEN';
+  mode: 'CAGE' | 'CHASE' | 'SCATTER' | 'FRIGHTENED' | 'EATEN' | 'RETURNING';
   color: string;
   originalColor: string;
   personalityType: 'BLINKY' | 'PINKY' | 'INKY' | 'CLYDE';
@@ -58,13 +58,13 @@ type Cherry = {
   timer: number;
 };
 
-// Much slower speed configurations (reduced significantly)
+// Much slower speed configurations (reduced significantly and further reduced ghost speed)
 const SPEED_CONFIG = {
-  1: { pacman: 0.3, ghost: 0.25, frightened: 0.15, tunnel: 0.1 },
-  2: { pacman: 0.35, ghost: 0.28, frightened: 0.18, tunnel: 0.12 },
-  5: { pacman: 0.4, ghost: 0.32, frightened: 0.2, tunnel: 0.15 },
-  17: { pacman: 0.4, ghost: 0.32, frightened: 0, tunnel: 0.15 },
-  21: { pacman: 0.35, ghost: 0.32, frightened: 0, tunnel: 0.15 }
+  1: { pacman: 0.3, ghost: 0.22, frightened: 0.15, tunnel: 0.1 }, // Reduced ghost speed by 5%
+  2: { pacman: 0.35, ghost: 0.26, frightened: 0.18, tunnel: 0.12 },
+  5: { pacman: 0.4, ghost: 0.30, frightened: 0.2, tunnel: 0.15 },
+  17: { pacman: 0.4, ghost: 0.30, frightened: 0, tunnel: 0.15 },
+  21: { pacman: 0.35, ghost: 0.30, frightened: 0, tunnel: 0.15 }
 };
 
 // Power pellet duration per level (in frames at 30fps)
@@ -108,22 +108,22 @@ export default function CanvasPacman({
   const ghostsRef = useRef<Ghost[]>([
     {
       x: 9, y: 9, dir: 'UP', mode: 'CHASE', color: '#FF0000', originalColor: '#FF0000',
-      personalityType: 'BLINKY', releaseTimer: 0, frightenedTimer: 0, pauseTimer: 0, speed: 0.25,
+      personalityType: 'BLINKY', releaseTimer: 0, frightenedTimer: 0, pauseTimer: 0, speed: 0.22,
       cornerTargets: [{ x: 18, y: 0 }, { x: 18, y: 5 }]
     },
     {
       x: 8, y: 10, dir: 'UP', mode: 'CAGE', color: '#FFB8FF', originalColor: '#FFB8FF',
-      personalityType: 'PINKY', releaseTimer: 90, frightenedTimer: 0, pauseTimer: 0, speed: 0.25, // Reduced from 300 to 90 frames (3 seconds)
+      personalityType: 'PINKY', releaseTimer: 120, frightenedTimer: 0, pauseTimer: 0, speed: 0.22, // Changed to 4 seconds
       cornerTargets: [{ x: 0, y: 0 }, { x: 5, y: 0 }]
     },
     {
       x: 9, y: 10, dir: 'DOWN', mode: 'CAGE', color: '#00FFFF', originalColor: '#00FFFF',
-      personalityType: 'INKY', releaseTimer: 180, frightenedTimer: 0, pauseTimer: 0, speed: 0.25, // Reduced from 600 to 180 frames (6 seconds)
+      personalityType: 'INKY', releaseTimer: 240, frightenedTimer: 0, pauseTimer: 0, speed: 0.22, // Changed to 8 seconds
       cornerTargets: [{ x: 18, y: 20 }, { x: 13, y: 20 }]
     },
     {
       x: 10, y: 10, dir: 'UP', mode: 'CAGE', color: '#FFB847', originalColor: '#FFB847',
-      personalityType: 'CLYDE', releaseTimer: 270, frightenedTimer: 0, pauseTimer: 0, speed: 0.25, // Reduced from 900 to 270 frames (9 seconds)
+      personalityType: 'CLYDE', releaseTimer: 360, frightenedTimer: 0, pauseTimer: 0, speed: 0.22, // Changed to 12 seconds
       cornerTargets: [{ x: 0, y: 20 }, { x: 5, y: 20 }]
     }
   ]);
@@ -200,7 +200,7 @@ export default function CanvasPacman({
       return { x: Math.floor(Math.random() * COLS), y: Math.floor(Math.random() * ROWS) };
     }
     
-    if (ghost.mode === 'EATEN') {
+    if (ghost.mode === 'EATEN' || ghost.mode === 'RETURNING') {
       return { x: 9, y: 9 }; // Return to ghost house
     }
 
@@ -293,7 +293,7 @@ export default function CanvasPacman({
         
         // Make all active ghosts frightened
         ghostsRef.current.forEach(g => {
-          if (g.mode !== 'CAGE' && g.mode !== 'EATEN') {
+          if (g.mode !== 'CAGE' && g.mode !== 'EATEN' && g.mode !== 'RETURNING') {
             g.mode = 'FRIGHTENED';
             g.frightenedTimer = gameStateRef.current.powerTimer;
             // Reverse direction when becoming frightened
@@ -324,13 +324,25 @@ export default function CanvasPacman({
         return;
       } else {
         ghost.mode = 'CHASE';
-        ghost.y = 9; // Move out of cage
+        ghost.x = 9; // Ensure proper positioning
+        ghost.y = 9; // Move out of cage to center
+      }
+    }
+
+    // Handle returning to cage after being eaten
+    if (ghost.mode === 'RETURNING') {
+      if (ghost.x === 9 && ghost.y === 9) {
+        ghost.mode = 'CHASE';
+        ghost.color = ghost.originalColor;
+        ghost.frightenedTimer = 0;
       }
     }
 
     // Much slower ghost movement
     const speedConfig = getCurrentSpeedConfig();
-    const moveInterval = Math.ceil(1 / (ghost.mode === 'FRIGHTENED' ? speedConfig.frightened : speedConfig.ghost));
+    const moveInterval = Math.ceil(1 / (ghost.mode === 'FRIGHTENED' ? speedConfig.frightened : 
+                                       ghost.mode === 'EATEN' || ghost.mode === 'RETURNING' ? speedConfig.ghost * 2 : 
+                                       speedConfig.ghost));
     if (gameStateRef.current.frameCount % moveInterval !== 0) {
       return;
     }
@@ -417,19 +429,18 @@ export default function CanvasPacman({
           gameStateRef.current.score += points;
           setScore(gameStateRef.current.score);
           
-          ghost.mode = 'EATEN';
+          ghost.mode = 'RETURNING';
           ghost.color = '#666666'; // Gray for eaten ghost
-          ghost.pauseTimer = 30; // 1 second pause at 30fps
           
-          // Brief game pause for effect
+          // Pause the entire game for 1 second when eating ghost
           gameStateRef.current.paused = true;
           setTimeout(() => {
             if (!gameStateRef.current.gameOver) {
               gameStateRef.current.paused = false;
             }
-          }, 33); // Brief pause
+          }, 1000); // 1 second pause
           
-        } else if (ghost.mode !== 'EATEN') {
+        } else if (ghost.mode !== 'EATEN' && ghost.mode !== 'RETURNING') {
           // Ghost caught Pacman
           gameStateRef.current.lives--;
           setLives(gameStateRef.current.lives);
@@ -450,15 +461,19 @@ export default function CanvasPacman({
             // Reset ghosts
             const speedConfig = getCurrentSpeedConfig();
             ghostsRef.current.forEach((g, i) => {
-              g.x = i === 0 ? 9 : 8 + i;
-              g.y = i === 0 ? 9 : 10;
+              if (i === 0) {
+                g.x = 9; g.y = 9; // Blinky starts in center
+              } else {
+                // Properly position other ghosts in cage
+                g.x = 7 + i; g.y = 10; // Spread them out more
+              }
               g.mode = i === 0 ? 'CHASE' : 'CAGE';
               g.dir = i % 2 === 0 ? 'UP' : 'DOWN';
               g.speed = speedConfig.ghost;
               g.frightenedTimer = 0;
               g.pauseTimer = 0;
               g.color = g.originalColor;
-              g.releaseTimer = i === 0 ? 0 : i * 90; // Stagger release every 3 seconds
+              g.releaseTimer = i === 0 ? 0 : i * 120; // Stagger release every 4 seconds
             });
 
             gameStateRef.current.powerMode = false;
@@ -486,11 +501,18 @@ export default function CanvasPacman({
       if (Math.random() < 0.001) {
         cherry.active = true;
         cherry.timer = FRAME_RATE * 15; // 15 seconds
-        // Random position in playable area
+        // Random position in playable area, ensuring it's not in walls
+        let attempts = 0;
         do {
-          cherry.x = Math.floor(Math.random() * COLS);
-          cherry.y = Math.floor(Math.random() * ROWS);
-        } while (mazeRef.current[cherry.y][cherry.x] === 0);
+          cherry.x = Math.floor(Math.random() * (COLS - 2)) + 1; // Avoid edges
+          cherry.y = Math.floor(Math.random() * (ROWS - 2)) + 1; // Avoid edges
+          attempts++;
+        } while (mazeRef.current[cherry.y][cherry.x] === 0 && attempts < 50);
+        
+        // If we can't find a good spot, don't spawn
+        if (attempts >= 50) {
+          cherry.active = false;
+        }
       }
     } else {
       cherry.timer--;
@@ -528,15 +550,19 @@ export default function CanvasPacman({
       // Reset ghosts with new speeds
       const speedConfig = getCurrentSpeedConfig();
       ghostsRef.current.forEach((g, i) => {
-        g.x = i === 0 ? 9 : 8 + i;
-        g.y = i === 0 ? 9 : 10;
+        if (i === 0) {
+          g.x = 9; g.y = 9; // Blinky starts in center
+        } else {
+          // Properly position other ghosts in cage
+          g.x = 7 + i; g.y = 10; // Spread them out more
+        }
         g.mode = i === 0 ? 'CHASE' : 'CAGE';
         g.dir = i % 2 === 0 ? 'UP' : 'DOWN';
         g.speed = speedConfig.ghost;
         g.frightenedTimer = 0;
         g.pauseTimer = 0;
         g.color = g.originalColor;
-        g.releaseTimer = i === 0 ? 0 : i * 90; // Stagger release
+        g.releaseTimer = i === 0 ? 0 : i * 120; // Stagger release every 4 seconds
       });
 
       gameStateRef.current.powerMode = false;
@@ -625,9 +651,9 @@ export default function CanvasPacman({
       });
     });
 
-    // Draw cherry
+    // Draw cherry (only if in valid position)
     const cherry = cherryRef.current;
-    if (cherry.active) {
+    if (cherry.active && cherry.x >= 0 && cherry.x < COLS && cherry.y >= 0 && cherry.y < ROWS) {
       ctx.fillStyle = '#FF0000';
       ctx.beginPath();
       ctx.arc(cherry.x * BLOCK + BLOCK / 2, cherry.y * BLOCK + BLOCK / 2, 4, 0, Math.PI * 2);
@@ -678,8 +704,8 @@ export default function CanvasPacman({
       const gx = ghost.x * BLOCK + BLOCK / 2;
       const gy = ghost.y * BLOCK + BLOCK / 2;
 
-      if (ghost.mode === 'EATEN') {
-        // Just draw eyes when eaten
+      if (ghost.mode === 'EATEN' || ghost.mode === 'RETURNING') {
+        // Just draw eyes when eaten/returning
         ctx.fillStyle = '#FFF';
         ctx.fillRect(gx - 6, gy - 6, 4, 4);
         ctx.fillRect(gx + 2, gy - 6, 4, 4);
@@ -831,26 +857,26 @@ export default function CanvasPacman({
         animFrame: 0
       };
 
-      // Reset ghosts with proper release timers
+      // Reset ghosts with proper release timers and positioning
       ghostsRef.current = [
         {
           x: 9, y: 9, dir: 'UP', mode: 'CHASE', color: '#FF0000', originalColor: '#FF0000',
-          personalityType: 'BLINKY', releaseTimer: 0, frightenedTimer: 0, pauseTimer: 0, speed: 0.25,
+          personalityType: 'BLINKY', releaseTimer: 0, frightenedTimer: 0, pauseTimer: 0, speed: 0.22,
           cornerTargets: [{ x: 18, y: 0 }, { x: 18, y: 5 }]
         },
         {
           x: 8, y: 10, dir: 'UP', mode: 'CAGE', color: '#FFB8FF', originalColor: '#FFB8FF',
-          personalityType: 'PINKY', releaseTimer: 90, frightenedTimer: 0, pauseTimer: 0, speed: 0.25, // 3 seconds
+          personalityType: 'PINKY', releaseTimer: 120, frightenedTimer: 0, pauseTimer: 0, speed: 0.22, // 4 seconds
           cornerTargets: [{ x: 0, y: 0 }, { x: 5, y: 0 }]
         },
         {
           x: 9, y: 10, dir: 'DOWN', mode: 'CAGE', color: '#00FFFF', originalColor: '#00FFFF',
-          personalityType: 'INKY', releaseTimer: 180, frightenedTimer: 0, pauseTimer: 0, speed: 0.25, // 6 seconds
+          personalityType: 'INKY', releaseTimer: 240, frightenedTimer: 0, pauseTimer: 0, speed: 0.22, // 8 seconds
           cornerTargets: [{ x: 18, y: 20 }, { x: 13, y: 20 }]
         },
         {
           x: 10, y: 10, dir: 'UP', mode: 'CAGE', color: '#FFB847', originalColor: '#FFB847',
-          personalityType: 'CLYDE', releaseTimer: 270, frightenedTimer: 0, pauseTimer: 0, speed: 0.25, // 9 seconds
+          personalityType: 'CLYDE', releaseTimer: 360, frightenedTimer: 0, pauseTimer: 0, speed: 0.22, // 12 seconds
           cornerTargets: [{ x: 0, y: 20 }, { x: 5, y: 20 }]
         }
       ];
@@ -975,28 +1001,37 @@ export default function CanvasPacman({
         }}
       />
 
-      {/* HUD */}
+      {/* HUD - Positioned at top of game border */}
       <div style={{
         position: 'absolute',
-        top: `${-50 * scale}px`,
+        top: `${-5}px`, // Very close to the top border
         left: '0',
-        width: `${containerWidth}px`,
+        right: '0',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
-        padding: `0 ${8 * scale}px`,
-        color: '#FFFF00',
-        fontFamily: 'monospace',
-        fontSize: `${16 * scale}px`,
-        fontWeight: 'bold',
-        pointerEvents: 'none',
-        transform: `scale(${scale})`,
-        transformOrigin: 'top left'
+        zIndex: 10,
+        pointerEvents: 'none'
       }}>
-        <div>Score: {score}</div>
-        <div>Level: {level}</div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-          Lives: {Array.from({length: lives}, (_, i) => '🧡').join('')}
+        <div style={{
+          background: 'linear-gradient(135deg, rgba(8, 8, 12, 0.9) 0%, rgba(15, 15, 20, 0.9) 100%)',
+          border: '2px solid rgba(255, 215, 0, 0.3)',
+          borderRadius: '12px',
+          padding: '8px 16px',
+          backdropFilter: 'blur(8px)',
+          display: 'flex',
+          gap: '20px',
+          alignItems: 'center',
+          fontSize: `${12 * scale}px`,
+          fontFamily: 'monospace',
+          fontWeight: 'bold',
+          color: '#FFFF00'
+        }}>
+          <div>Score: {score.toLocaleString()}</div>
+          <div>Level: {level}</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            Lives: {Array.from({length: lives}, (_, i) => '🧡').join('')}
+          </div>
         </div>
       </div>
 
@@ -1031,7 +1066,7 @@ export default function CanvasPacman({
           color: 'white',
           fontSize: '24px',
           fontFamily: 'sans-serif',
-          zIndex: 9999
+          zIndex: 10000
         }}>
           <div style={{
             background: '#333',
@@ -1040,7 +1075,9 @@ export default function CanvasPacman({
             textAlign: 'center',
             border: '2px solid #FFD700',
             minWidth: '300px',
-            position: 'relative'
+            position: 'relative',
+            maxWidth: '90vw',
+            maxHeight: '90vh'
           }}>
             <button
               onClick={() => { setIsGameOver(false); }}

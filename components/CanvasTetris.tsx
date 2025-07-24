@@ -508,25 +508,60 @@ export default function CanvasTetris({
 
       {isGameOver && (
         <div style={{
-          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-          background: 'rgba(0,0,0,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center',
-          color: 'white', fontSize: '24px', fontFamily: 'sans-serif', zIndex: 9999
+          position: 'fixed', 
+          top: 0, 
+          left: 0, 
+          width: '100vw', 
+          height: '100vh',
+          background: 'rgba(0,0,0,0.9)', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center',
+          color: 'white', 
+          fontSize: '24px', 
+          fontFamily: 'sans-serif', 
+          zIndex: 99999,
+          margin: 0,
+          padding: 0
         }}>
           <div style={{
-            background: '#333', padding: '40px', borderRadius: '10px',
-            textAlign: 'center', border: '2px solid #666', minWidth: '300px', position: 'relative'
+            background: '#333', 
+            padding: '40px', 
+            borderRadius: '10px',
+            textAlign: 'center', 
+            border: '2px solid #666', 
+            minWidth: '300px', 
+            position: 'relative',
+            maxWidth: '500px',
+            width: '90%'
           }}>
             <button
               onClick={() => setIsGameOver(false)}
               style={{
-                position: 'absolute', top: '10px', right: '10px',
-                background: 'transparent', border: 'none', color: '#999', fontSize: '24px',
-                cursor: 'pointer', width: '30px', height: '30px', display: 'flex',
-                alignItems: 'center', justifyContent: 'center', borderRadius: '50%',
+                position: 'absolute', 
+                top: '10px', 
+                right: '10px',
+                background: 'transparent', 
+                border: 'none', 
+                color: '#999', 
+                fontSize: '24px',
+                cursor: 'pointer', 
+                width: '30px', 
+                height: '30px', 
+                display: 'flex',
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                borderRadius: '50%',
                 transition: 'all 0.2s'
               }}
-              onMouseOver={e => { e.currentTarget.style.background='rgba(255,255,255,0.1)'; e.currentTarget.style.color='#fff'; }}
-              onMouseOut={e => { e.currentTarget.style.background='transparent'; e.currentTarget.style.color='#999'; }}
+              onMouseOver={e => { 
+                e.currentTarget.style.background='rgba(255,255,255,0.1)'; 
+                e.currentTarget.style.color='#fff'; 
+              }}
+              onMouseOut={e => { 
+                e.currentTarget.style.background='transparent'; 
+                e.currentTarget.style.color='#999'; 
+              }}
             >×</button>
 
             <h2 style={{ margin: '0 0 20px 0', color: '#fff' }}>Game Over!</h2>

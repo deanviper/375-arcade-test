@@ -45,14 +45,14 @@ export default function GameCarousel({
     background: 'linear-gradient(135deg, #FF3D14 0%, #50FFD6 100%)',
    border: 'none',
    borderRadius: '12px',
-   padding: '16px 32px',
+   padding: '14px 28px',
    color: 'white',
    fontSize: responsiveStyles.fontSize,
    fontWeight: '600',
    cursor: 'pointer',
    transition: 'all 0.2s',
    boxShadow: '0 4px 15px rgba(80, 255, 214, 0.4)',
-   minWidth: '200px'
+   minWidth: '180px'
  };
 
  return (
@@ -60,32 +60,41 @@ export default function GameCarousel({
      <style jsx>{`
        .carousel-transition { transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; }
        .carousel-game-center, .carousel-game-side {
-         display: flex; flex-direction: column; align-items: center; justify-content: center; height: 450px !important;
+         display: flex; 
+         flex-direction: row; 
+         align-items: center; 
+         justify-content: center; 
+         height: 180px !important;
+         padding: 20px !important;
+         gap: 20px;
+         text-align: center;
        }
        @media (max-width: 768px) {
          .carousel-container {
            flex-direction: column !important;
-           gap: 20px !important;
+           gap: 15px !important;
          }
          .carousel-game-center, .carousel-game-side {
-           min-width: 250px !important;
-           max-width: 280px !important;
-           height: 350px !important;
+           min-width: 280px !important;
+           max-width: 320px !important;
+           height: 140px !important;
+           padding: 15px !important;
+           gap: 15px;
          }
        }
        @media (min-width: 481px) and (max-width: 768px) {
          .tablet-adjustments {
-           transform: scale(0.5) !important;
+           transform: scale(0.9) !important;
          }
          .carousel-game-center, .carousel-game-side {
-           min-width: 200px !important;
-           max-width: 220px !important;
-           height: 180px !important;
+           min-width: 320px !important;
+           max-width: 360px !important;
+           height: 160px !important;
          }
        }
        @keyframes pulse {
-         0%, 100% { transform: scale(1.05); }
-         50% { transform: scale(1.1); }
+         0%, 100% { transform: scale(1.02); }
+         50% { transform: scale(1.05); }
        }
      `}</style>
 
@@ -95,24 +104,24 @@ export default function GameCarousel({
        alignItems: 'center',
        justifyContent: 'center',
        position: 'relative',
-       minHeight: '400px'
+       minHeight: '220px'
      }}>
        <button
          onClick={handleCarouselPrev}
          style={{
            position: 'absolute',
-           left: '50px',
+           left: '30px',
            zIndex: 10,
            background: 'rgba(255, 61, 20, 0.2)',
            border: '2px solid rgba(255, 61, 20, 0.5)',
            borderRadius: '50%',
-           width: '60px',
-           height: '60px',
+           width: '50px',
+           height: '50px',
            display: 'flex',
            alignItems: 'center',
            justifyContent: 'center',
            cursor: 'pointer',
-           fontSize: '24px',
+           fontSize: '20px',
            color: '#FF3D14',
            transition: 'all 0.3s ease'
          }}
@@ -122,166 +131,167 @@ export default function GameCarousel({
 
        <div className="carousel-game-side carousel-transition" style={{
          ...cardStyle,
-         minWidth: '280px',
-         maxWidth: '300px',
-         height: showPaymentButtons ? '450px' : '360px',
+         minWidth: '300px',
+         maxWidth: '400px',
+         height: showPaymentButtons ? '180px' : '160px',
          opacity: 0.4,
          filter: 'blur(2px)',
          border: '2px solid rgba(255, 61, 20, 0.4)',
          boxShadow: '0 25px 50px -12px rgba(255, 61, 20, 0.3)',
-         transform: 'scale(0.8)',
+         transform: 'scale(0.85)',
          pointerEvents: 'none'
        }}>
          <div style={{
-           width: '80px',
-           height: '80px',
+           width: '60px',
+           height: '60px',
            display: 'flex',
            alignItems: 'center',
            justifyContent: 'center',
-           marginBottom: '20px',
-           margin: '0 auto 20px auto'
+           flexShrink: 0
          }}>
            {leftGame.icon.startsWith('/') ? (
              <img src={leftGame.icon} alt={leftGame.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
            ) : (
-             <span style={{ fontSize: '76px', lineHeight: 1 }}>{leftGame.icon}</span>
+             <span style={{ fontSize: '56px', lineHeight: 1 }}>{leftGame.icon}</span>
            )}
          </div>
-         <h3 style={{ color: '#9CA3AF', margin: 0, fontSize: '28px', textAlign: 'center' }}>{leftGame.name}</h3>
+         <div style={{ flex: 1, textAlign: 'center' }}>
+           <h3 style={{ color: '#9CA3AF', margin: '0 0 8px 0', fontSize: '20px' }}>{leftGame.name}</h3>
+           <p style={{ color: '#666', fontSize: '12px', margin: 0 }}>{leftGame.description}</p>
+         </div>
        </div>
 
        <div className="carousel-game-center carousel-transition" style={{
          ...cardStyle,
-         minWidth: '400px',
-         maxWidth: '440px',
-         height: showPaymentButtons ? '450px' : '360px',
+         minWidth: '500px',
+         maxWidth: '600px',
+         height: showPaymentButtons ? '180px' : '160px',
          border: `3px solid ${currentGame.borderColor}`,
          boxShadow: `0 25px 50px -12px ${currentGame.borderColor}40`,
-         transform: 'scale(1.05)'
+         transform: 'scale(1.0)'
        }}>
          <div style={{
-           width: showPaymentButtons ? '100px' : '120px',
-           height: showPaymentButtons ? '100px' : '120px',
+           width: showPaymentButtons ? '80px' : '90px',
+           height: showPaymentButtons ? '80px' : '90px',
            display: 'flex',
            alignItems: 'center',
            justifyContent: 'center',
-           marginBottom: showPaymentButtons ? '25px' : '16px',
-           margin: `0 auto ${showPaymentButtons ? '25px' : '16px'} auto`
+           flexShrink: 0
          }}>
            {currentGame.icon.startsWith('/') ? (
              <img src={currentGame.icon} alt={currentGame.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
            ) : (
-             <span style={{ fontSize: showPaymentButtons ? '96px' : '110px', lineHeight: 1 }}>{currentGame.icon}</span>
+             <span style={{ fontSize: showPaymentButtons ? '76px' : '86px', lineHeight: 1 }}>{currentGame.icon}</span>
            )}
          </div>
-         <h2 style={{
-           fontSize: showPaymentButtons ? '32px' : '36px',
-           marginBottom: '15px',
-           color: currentGame.borderColor,
-           fontWeight: 700,
-           textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-           textAlign: 'center'
-         }}>
-           {currentGame.name}
-         </h2>
-         <p style={{ marginBottom: showPaymentButtons ? '20px' : '30px', color: '#9CA3AF', fontSize: responsiveStyles.fontSize, textAlign: 'center' }}>
-           {currentGame.description}
-         </p>
+         <div style={{ flex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingLeft: '20px' }}>
+           <h2 style={{
+             fontSize: showPaymentButtons ? '24px' : '28px',
+             marginBottom: '8px',
+             color: currentGame.borderColor,
+             fontWeight: 700,
+             textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+           }}>
+             {currentGame.name}
+           </h2>
+           <p style={{ marginBottom: showPaymentButtons ? '15px' : '20px', color: '#9CA3AF', fontSize: '14px' }}>
+             {currentGame.description}
+           </p>
 
-         {currentGame.id && (
-           <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}>
-             {!showPaymentButtons ? (
-               <>
-                 <button
-                   style={{ ...buttonStyle, animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}
-                   onClick={onWalletConnection}
-                 >
-                   🔗 Connect Wallet & Play
-                 </button>
-                 <p style={{ fontSize: '13px', color: '#9CA3AF', margin: '10px 0 5px', textAlign: 'center' }}>
-                   Don't want to connect your wallet and publish your scores? No worries!
-                 </p>
+           {currentGame.id && (
+             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
+               {!showPaymentButtons ? (
+                 <>
+                   <button
+                     style={{ ...buttonStyle, animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}
+                     onClick={onWalletConnection}
+                   >
+                     🔗 Connect Wallet & Play
+                   </button>
+                   <button
+                     style={{
+                       background: 'rgba(25, 25, 35, 0.5)',
+                       border: '2px solid rgba(107, 114, 128, 0.3)',
+                       borderRadius: '12px',
+                       padding: '10px 20px',
+                       color: '#9CA3AF',
+                       fontSize: '12px',
+                       fontWeight: 500,
+                       cursor: 'pointer',
+                       transition: 'all 0.2s',
+                       minWidth: '140px'
+                     }}
+                     onClick={() => onOfflinePlay(currentGame.id)}
+                   >
+                     Just Play
+                   </button>
+                 </>
+               ) : (
                  <button
                    style={{
-                     background: 'rgba(25, 25, 35, 0.5)',
-                     border: '2px solid rgba(107, 114, 128, 0.3)',
-                     borderRadius: '12px',
-                     padding: '12px 24px',
-                     color: '#9CA3AF',
-                     fontSize: '14px',
-                     fontWeight: 500,
-                     cursor: 'pointer',
-                     transition: 'all 0.2s',
-                     minWidth: '200px'
+                     ...buttonStyle,
+                     animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                     ...(isProcessingPayment ? { opacity: 0.7, cursor: 'not-allowed' } : {})
                    }}
-                   onClick={() => onOfflinePlay(currentGame.id)}
+                   onClick={() => onGameSelect(currentGame.id)}
+                   disabled={isProcessingPayment}
                  >
-                   Just Play
+                   {isProcessingPayment ? '⏳ Processing...' : `Play ${currentGame.name}`}
                  </button>
-               </>
-             ) : (
-               <button
-                 style={{
-                   ...buttonStyle,
-                   animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                   ...(isProcessingPayment ? { opacity: 0.7, cursor: 'not-allowed' } : {})
-                 }}
-                 onClick={() => onGameSelect(currentGame.id)}
-                 disabled={isProcessingPayment}
-               >
-                 {isProcessingPayment ? '⏳ Processing...' : `Play ${currentGame.name}`}
-               </button>
-             )}
-           </div>
-         )}
+               )}
+             </div>
+           )}
+         </div>
        </div>
 
        <div className="carousel-game-side carousel-transition" style={{
          ...cardStyle,
-         minWidth: '280px',
-         maxWidth: '300px',
-         height: showPaymentButtons ? '450px' : '360px',
+         minWidth: '300px',
+         maxWidth: '400px',
+         height: showPaymentButtons ? '180px' : '160px',
          opacity: 0.4,
          filter: 'blur(2px)',
          border: '2px solid rgba(255, 61, 20, 0.4)',
          boxShadow: '0 25px 50px -12px rgba(255, 61, 20, 0.3)',
-         transform: 'scale(0.8)',
+         transform: 'scale(0.85)',
          pointerEvents: 'none'
        }}>
          <div style={{
-           width: '80px',
-           height: '80px',
+           width: '60px',
+           height: '60px',
            display: 'flex',
            alignItems: 'center',
            justifyContent: 'center',
-           marginBottom: '20px',
-           margin: '0 auto 20px auto'
+           flexShrink: 0
          }}>
            {rightGame.icon.startsWith('/') ? (
              <img src={rightGame.icon} alt={rightGame.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
            ) : (
-             <span style={{ fontSize: '76px', lineHeight: 1 }}>{rightGame.icon}</span>
+             <span style={{ fontSize: '56px', lineHeight: 1 }}>{rightGame.icon}</span>
            )}
          </div>
-         <h3 style={{ color: '#9CA3AF', margin: 0, fontSize: '28px', textAlign: 'center' }}>{rightGame.name}</h3>
+         <div style={{ flex: 1, textAlign: 'center' }}>
+           <h3 style={{ color: '#9CA3AF', margin: '0 0 8px 0', fontSize: '20px' }}>{rightGame.name}</h3>
+           <p style={{ color: '#666', fontSize: '12px', margin: 0 }}>{rightGame.description}</p>
+         </div>
        </div>
 
        <button
          onClick={handleCarouselNext}
          style={{
            position: 'absolute',
-           right: '50px',
+           right: '30px',
            zIndex: 10,
            background: 'rgba(255, 61, 20, 0.2)',
            border: '2px solid rgba(255, 61, 20, 0.5)',
            borderRadius: '50%',
-           width: '60px',
-           height: '60px',
+           width: '50px',
+           height: '50px',
            display: 'flex',
            alignItems: 'center',
            justifyContent: 'center',
            cursor: 'pointer',
-           fontSize: '24px',
+           fontSize: '20px',
            color: '#FF3D14',
            transition: 'all 0.3s ease'
          }}
@@ -292,4 +302,3 @@ export default function GameCarousel({
    </>
  );
 }
-    
