@@ -4396,8 +4396,8 @@ function Page() {
             const savedPaid = localStorage.getItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].IS_PAID) === 'true';
             const savedGame = localStorage.getItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].SELECTED_GAME);
             if (savedAuth) {
-                setAuthed('true');
-                setIsPaid(savedPaid ? 'true' : 'false');
+                setAuthed(true);
+                setIsPaid(savedPaid);
                 if (savedGame) setSelectedGame(savedGame);
             }
         } catch (e) {
@@ -4406,10 +4406,7 @@ function Page() {
     }, [
         mounted,
         address,
-        isConnected,
-        setAuthed,
-        setIsPaid,
-        setSelectedGame
+        isConnected
     ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!mounted) return;
@@ -4433,8 +4430,8 @@ function Page() {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!mounted) return;
         if (!isConnected) {
-            setAuthed('false');
-            setIsPaid('false');
+            setAuthed(false);
+            setIsPaid(false);
             setSelectedGame(null);
             setGameStarted(false);
             setGameOver(false);
@@ -4446,8 +4443,8 @@ function Page() {
                 const savedPaid = localStorage.getItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].IS_PAID) === 'true';
                 const savedGame = localStorage.getItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].SELECTED_GAME);
                 if (savedAuth) {
-                    setAuthed('true');
-                    setIsPaid(savedPaid ? 'true' : 'false');
+                    setAuthed(true);
+                    setIsPaid(savedPaid);
                     if (savedGame) setSelectedGame(savedGame);
                 }
             } catch (e) {
@@ -4457,14 +4454,11 @@ function Page() {
     }, [
         mounted,
         isConnected,
-        address,
-        setAuthed,
-        setIsPaid,
-        setSelectedGame
+        address
     ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!mounted) return;
-        const canStartGame = (isPaid === 'true' || isOfflineMode) && selectedGame && !gameStarted && !gameOver;
+        const canStartGame = (isPaid || isOfflineMode) && selectedGame && !gameStarted && !gameOver;
         if (!canStartGame) return;
         const handler = (e)=>{
             if (e.code === 'Space') {
@@ -4498,7 +4492,7 @@ function Page() {
         try {
             await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$walletUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["handlePayment"])(gameType);
             setSelectedGame(gameType);
-            setIsPaid('true');
+            setIsPaid(true);
             setGameStarted(false);
             setGameOver(false);
         } catch (e) {
@@ -4519,10 +4513,10 @@ function Page() {
     const handleHomeClick = ()=>{
         setGameStarted(false);
         setGameOver(false);
-        setIsPaid('false');
+        setIsPaid(false);
         setSelectedGame(null);
         if (isOfflineMode) {
-            setAuthed('false');
+            setAuthed(false);
             setIsOfflineMode(false);
         }
         try {
@@ -4534,8 +4528,8 @@ function Page() {
     };
     const handleDisconnectWallet = ()=>{
         disconnect();
-        setAuthed('false');
-        setIsPaid('false');
+        setAuthed(false);
+        setIsPaid(false);
         setSelectedGame(null);
         setGameStarted(false);
         setGameOver(false);
@@ -4553,8 +4547,8 @@ function Page() {
     const handleAuthentication = async ()=>{
         try {
             await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$walletUtils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["authenticateUser"])(signMessageAsync);
-            setAuthed('true');
-            setIsPaid('false');
+            setAuthed(true);
+            setIsPaid(false);
             setSelectedGame(null);
             setGameStarted(false);
             setGameOver(false);
@@ -4640,8 +4634,8 @@ function Page() {
       }
     }
   `;
-    const isAuthenticated = authed === 'true';
-    const hasPaid = isPaid === 'true';
+    const isAuthenticated = authed;
+    const hasPaid = isPaid;
     // Wrong network check
     if (chainId && chainId !== 1270 && !isOfflineMode) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5141,7 +5135,7 @@ function Page() {
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
                         lineNumber: 541,
-                        columnNumber: 3
+                        columnNumber: 13
                     }, this) : selectedGame === 'pacman' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CanvasPacman$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         start: gameStarted,
                         onGameOver: (score, level)=>{
@@ -5155,7 +5149,7 @@ function Page() {
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
                         lineNumber: 553,
-                        columnNumber: 3
+                        columnNumber: 13
                     }, this) : null
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",

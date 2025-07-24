@@ -48,12 +48,12 @@ export default function Page() {
       const savedPaid = localStorage.getItem(STORAGE_KEYS.IS_PAID) === 'true';
       const savedGame = localStorage.getItem(STORAGE_KEYS.SELECTED_GAME) as GameType;
       if (savedAuth) {
-        setAuthed('true');
-        setIsPaid(savedPaid ? 'true' : 'false');
+        setAuthed(true);
+        setIsPaid(savedPaid);
         if (savedGame) setSelectedGame(savedGame);
       }
     } catch (e) { console.error(e); }
-  }, [mounted, address, isConnected, setAuthed, setIsPaid, setSelectedGame]);
+  }, [mounted, address, isConnected]);
 
   useEffect(() => {
     if (!mounted) return;
@@ -71,8 +71,8 @@ export default function Page() {
   useEffect(() => {
     if (!mounted) return;
     if (!isConnected) {
-      setAuthed('false');
-      setIsPaid('false');
+      setAuthed(false);
+      setIsPaid(false);
       setSelectedGame(null);
       setGameStarted(false);
       setGameOver(false);
@@ -84,17 +84,17 @@ export default function Page() {
         const savedPaid = localStorage.getItem(STORAGE_KEYS.IS_PAID) === 'true';
         const savedGame = localStorage.getItem(STORAGE_KEYS.SELECTED_GAME) as GameType;
         if (savedAuth) {
-          setAuthed('true');
-          setIsPaid(savedPaid ? 'true' : 'false');
+          setAuthed(true);
+          setIsPaid(savedPaid);
           if (savedGame) setSelectedGame(savedGame);
         }
       } catch (e) { console.error(e); }
     }
-  }, [mounted, isConnected, address, setAuthed, setIsPaid, setSelectedGame]);
+  }, [mounted, isConnected, address]);
 
   useEffect(() => {
     if (!mounted) return;
-    const canStartGame = ((isPaid === 'true') || isOfflineMode) && selectedGame && !gameStarted && !gameOver;
+    const canStartGame = (isPaid || isOfflineMode) && selectedGame && !gameStarted && !gameOver;
     if (!canStartGame) return;
     const handler = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
@@ -122,7 +122,7 @@ export default function Page() {
     try {
       await handlePayment(gameType);
       setSelectedGame(gameType);
-      setIsPaid('true');
+      setIsPaid(true);
       setGameStarted(false);
       setGameOver(false);
     } catch (e: any) {
@@ -146,10 +146,10 @@ export default function Page() {
   const handleHomeClick = () => {
     setGameStarted(false);
     setGameOver(false);
-    setIsPaid('false');
+    setIsPaid(false);
     setSelectedGame(null);
     if (isOfflineMode) {
-      setAuthed('false');
+      setAuthed(false);
       setIsOfflineMode(false);
     }
     try {
@@ -160,8 +160,8 @@ export default function Page() {
 
   const handleDisconnectWallet = () => {
     disconnect();
-    setAuthed('false');
-    setIsPaid('false');
+    setAuthed(false);
+    setIsPaid(false);
     setSelectedGame(null);
     setGameStarted(false);
     setGameOver(false);
@@ -180,8 +180,8 @@ export default function Page() {
   const handleAuthentication = async () => {
     try {
       await authenticateUser(signMessageAsync);
-      setAuthed('true');
-      setIsPaid('false');
+      setAuthed(true);
+      setIsPaid(false);
       setSelectedGame(null);
       setGameStarted(false);
       setGameOver(false);
@@ -192,25 +192,25 @@ export default function Page() {
   };
 
   const handleOfflinePlay = (gameType: GameType) => {
-  console.log('Starting offline play for:', gameType);
-  setIsOfflineMode(true);
-  setAuthed(true);
-  setSelectedGame(gameType);
-  setIsPaid(true);
-  setGameStarted(false);
-  setGameOver(false);
-  
-  // Force localStorage update
-  try {
-    localStorage.setItem(STORAGE_KEYS.IS_AUTHENTICATED, 'true');
-    localStorage.setItem(STORAGE_KEYS.IS_PAID, 'true');
-    if (gameType) {
-      localStorage.setItem(STORAGE_KEYS.SELECTED_GAME, gameType);
+    console.log('Starting offline play for:', gameType);
+    setIsOfflineMode(true);
+    setAuthed(true);
+    setSelectedGame(gameType);
+    setIsPaid(true);
+    setGameStarted(false);
+    setGameOver(false);
+    
+    // Force localStorage update
+    try {
+      localStorage.setItem(STORAGE_KEYS.IS_AUTHENTICATED, 'true');
+      localStorage.setItem(STORAGE_KEYS.IS_PAID, 'true');
+      if (gameType) {
+        localStorage.setItem(STORAGE_KEYS.SELECTED_GAME, gameType);
+      }
+    } catch (e) { 
+      console.error('localStorage error:', e); 
     }
-  } catch (e) { 
-    console.error('localStorage error:', e); 
-  }
-};
+  };
 
   const containerStyle = {
     minHeight: '100vh',
@@ -272,8 +272,8 @@ export default function Page() {
     }
   `;
 
-  const isAuthenticated = authed === 'true';
-  const hasPaid = isPaid === 'true';
+  const isAuthenticated = authed;
+  const hasPaid = isPaid;
 
   // Wrong network check
   if (chainId && chainId !== 1270 && !isOfflineMode) {
@@ -538,30 +538,30 @@ export default function Page() {
           minHeight: '100vh'
         }}>
           {selectedGame === 'tetris' ? (
-  <CanvasTetris
-    start={gameStarted}
-    onGameOver={(score, lines) => {
-      setGameOver(true);
-      setGameStarted(false);
-      // Only clear payment state on refresh/page reload, not on game over
-    }}
-    onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('tetris')}
-    onPublishScore={handlePublishScore}
-    playerAddress={isOfflineMode ? undefined : address}
-  />
-) : selectedGame === 'pacman' ? (
-  <CanvasPacman
-    start={gameStarted}
-    onGameOver={(score, level) => {
-      setGameOver(true);
-      setGameStarted(false);
-      // Only clear payment state on refresh/page reload, not on game over
-    }}
-    onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('pacman')}
-    onPublishScore={handlePublishScore}
-    playerAddress={isOfflineMode ? undefined : address}
-  />
-) : null}
+            <CanvasTetris
+              start={gameStarted}
+              onGameOver={(score, lines) => {
+                setGameOver(true);
+                setGameStarted(false);
+                // Only clear payment state on refresh/page reload, not on game over
+              }}
+              onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('tetris')}
+              onPublishScore={handlePublishScore}
+              playerAddress={isOfflineMode ? undefined : address}
+            />
+          ) : selectedGame === 'pacman' ? (
+            <CanvasPacman
+              start={gameStarted}
+              onGameOver={(score, level) => {
+                setGameOver(true);
+                setGameStarted(false);
+                // Only clear payment state on refresh/page reload, not on game over
+              }}
+              onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('pacman')}
+              onPublishScore={handlePublishScore}
+              playerAddress={isOfflineMode ? undefined : address}
+            />
+          ) : null}
         </div>
         <Footer />
       </div>

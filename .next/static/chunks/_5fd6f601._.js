@@ -4637,8 +4637,8 @@ function Page() {
                 const savedPaid = localStorage.getItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].IS_PAID) === 'true';
                 const savedGame = localStorage.getItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].SELECTED_GAME);
                 if (savedAuth) {
-                    setAuthed('true');
-                    setIsPaid(savedPaid ? 'true' : 'false');
+                    setAuthed(true);
+                    setIsPaid(savedPaid);
                     if (savedGame) setSelectedGame(savedGame);
                 }
             } catch (e) {
@@ -4648,10 +4648,7 @@ function Page() {
     }["Page.useEffect"], [
         mounted,
         address,
-        isConnected,
-        setAuthed,
-        setIsPaid,
-        setSelectedGame
+        isConnected
     ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Page.useEffect": ()=>{
@@ -4678,8 +4675,8 @@ function Page() {
         "Page.useEffect": ()=>{
             if (!mounted) return;
             if (!isConnected) {
-                setAuthed('false');
-                setIsPaid('false');
+                setAuthed(false);
+                setIsPaid(false);
                 setSelectedGame(null);
                 setGameStarted(false);
                 setGameOver(false);
@@ -4691,8 +4688,8 @@ function Page() {
                     const savedPaid = localStorage.getItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].IS_PAID) === 'true';
                     const savedGame = localStorage.getItem(__TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$index$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["STORAGE_KEYS"].SELECTED_GAME);
                     if (savedAuth) {
-                        setAuthed('true');
-                        setIsPaid(savedPaid ? 'true' : 'false');
+                        setAuthed(true);
+                        setIsPaid(savedPaid);
                         if (savedGame) setSelectedGame(savedGame);
                     }
                 } catch (e) {
@@ -4703,15 +4700,12 @@ function Page() {
     }["Page.useEffect"], [
         mounted,
         isConnected,
-        address,
-        setAuthed,
-        setIsPaid,
-        setSelectedGame
+        address
     ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Page.useEffect": ()=>{
             if (!mounted) return;
-            const canStartGame = (isPaid === 'true' || isOfflineMode) && selectedGame && !gameStarted && !gameOver;
+            const canStartGame = (isPaid || isOfflineMode) && selectedGame && !gameStarted && !gameOver;
             if (!canStartGame) return;
             const handler = {
                 "Page.useEffect.handler": (e)=>{
@@ -4752,7 +4746,7 @@ function Page() {
         try {
             await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$walletUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handlePayment"])(gameType);
             setSelectedGame(gameType);
-            setIsPaid('true');
+            setIsPaid(true);
             setGameStarted(false);
             setGameOver(false);
         } catch (e) {
@@ -4774,10 +4768,10 @@ function Page() {
     const handleHomeClick = ()=>{
         setGameStarted(false);
         setGameOver(false);
-        setIsPaid('false');
+        setIsPaid(false);
         setSelectedGame(null);
         if (isOfflineMode) {
-            setAuthed('false');
+            setAuthed(false);
             setIsOfflineMode(false);
         }
         try {
@@ -4789,8 +4783,8 @@ function Page() {
     };
     const handleDisconnectWallet = ()=>{
         disconnect();
-        setAuthed('false');
-        setIsPaid('false');
+        setAuthed(false);
+        setIsPaid(false);
         setSelectedGame(null);
         setGameStarted(false);
         setGameOver(false);
@@ -4808,8 +4802,8 @@ function Page() {
     const handleAuthentication = async ()=>{
         try {
             await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$walletUtils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["authenticateUser"])(signMessageAsync);
-            setAuthed('true');
-            setIsPaid('false');
+            setAuthed(true);
+            setIsPaid(false);
             setSelectedGame(null);
             setGameStarted(false);
             setGameOver(false);
@@ -4846,8 +4840,8 @@ function Page() {
         overflow: 'hidden'
     };
     const mobileStyles = "\n    @media (max-width: 480px) {\n      .mobile-message {\n        display: flex !important;\n      }\n      .desktop-content {\n        display: none !important;\n      }\n    }\n    @media (min-width: 481px) and (max-width: 768px) {\n      .tablet-adjustments {\n        transform: scale(0.5) !important;\n      }\n      .carousel-game-center, .carousel-game-side {\n        min-width: 200px !important;\n        max-width: 220px !important;\n        height: 180px !important;\n      }\n      .arcade-title-fixed {\n        max-width: 200px !important;\n      }\n    }\n    @media (max-width: 1440px) {\n      .arcade-container {\n        padding: 120px 15px 120px !important;\n      }\n      .arcade-title-fixed {\n        max-width: 400px !important;\n        margin-bottom: 50px !important;\n      }\n    }\n    @media (max-width: 768px) {\n      .arcade-container {\n        padding: 100px 10px 100px !important;\n      }\n      .arcade-title-fixed {\n        max-width: 280px !important;\n        margin-bottom: 30px !important;\n      }\n      .carousel-container {\n        flex-direction: column !important;\n        gap: 20px !important;\n      }\n      .carousel-game-center, .carousel-game-side {\n        min-width: 250px !important;\n        max-width: 280px !important;\n        height: 350px !important;\n      }\n    }\n  ";
-    const isAuthenticated = authed === 'true';
-    const hasPaid = isPaid === 'true';
+    const isAuthenticated = authed;
+    const hasPaid = isPaid;
     // Wrong network check
     if (chainId && chainId !== 1270 && !isOfflineMode) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5347,7 +5341,7 @@ function Page() {
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
                         lineNumber: 541,
-                        columnNumber: 3
+                        columnNumber: 13
                     }, this) : selectedGame === 'pacman' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CanvasPacman$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         start: gameStarted,
                         onGameOver: (score, level)=>{
@@ -5361,7 +5355,7 @@ function Page() {
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
                         lineNumber: 553,
-                        columnNumber: 3
+                        columnNumber: 13
                     }, this) : null
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
