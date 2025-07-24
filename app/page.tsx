@@ -429,7 +429,7 @@ export default function Page() {
           overflow: 'hidden'
         }}>
           <div style={{
-            transform: `scale(${responsiveConfig.titleScale * 1.2})`, // Increased by 20% from previous 1.5x
+            transform: `scale(${responsiveConfig.titleScale * 1.4})`, // Increased by 20% from previous 1.5x
             marginBottom: `${30 * responsiveConfig.titleScale}px`,
             transformOrigin: 'center center'
           }}>
@@ -532,7 +532,7 @@ export default function Page() {
           overflow: 'hidden'
         }}>
           <div style={{
-            transform: `scale(${responsiveConfig.titleScale * 1.2})`, // Increased by 20% from previous 1.5x
+            transform: `scale(${responsiveConfig.titleScale * 1.4})`, // Increased by 20% from previous 1.5x
             marginBottom: `${30 * responsiveConfig.titleScale}px`,
             transformOrigin: 'center center'
           }}>
