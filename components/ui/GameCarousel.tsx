@@ -184,7 +184,7 @@ export default function GameCarousel({
              <span style={{ fontSize: showPaymentButtons ? '76px' : '86px', lineHeight: 1 }}>{currentGame.icon}</span>
            )}
          </div>
-         <div style={{ flex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingLeft: '20px' }}>
+         <div style={{ flex: 1, textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingLeft: '20px', marginLeft:'-50px' }}>
            <h2 style={{
              fontSize: showPaymentButtons ? '24px' : '28px',
              marginBottom: '8px',

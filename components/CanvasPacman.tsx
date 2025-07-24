@@ -987,26 +987,12 @@ export default function CanvasPacman({
 
   return (
     <div style={{ position: 'relative', display: 'inline-block' }}>
-      <canvas
-        ref={canvasRef}
-        width={CANVAS_WIDTH}
-        height={CANVAS_HEIGHT}
-        style={{
-          background: '#000',
-          border: '2px solid #FFD700',
-          borderRadius: '8px',
-          transform: `scale(${scale})`,
-          transformOrigin: 'top left',
-          imageRendering: 'pixelated'
-        }}
-      />
-
-      {/* HUD - Positioned at top of game border */}
+      {/* HUD - Positioned above the game container and centered horizontally */}
       <div style={{
         position: 'absolute',
-        top: `${-5}px`, // Very close to the top border
-        left: '0',
-        right: '0',
+        top: `${-60 * scale}px`, // Positioned above the game
+        left: '50%',
+        transform: 'translateX(-50%)',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -1039,7 +1025,7 @@ export default function CanvasPacman({
       {gameStateRef.current.powerMode && (
         <div style={{
           position: 'absolute',
-          top: `${-80 * scale}px`,
+          top: `${-100 * scale}px`,
           left: '50%',
           transform: 'translateX(-50%)',
           color: '#00FFFF',
@@ -1052,21 +1038,38 @@ export default function CanvasPacman({
         </div>
       )}
 
+      <canvas
+        ref={canvasRef}
+        width={CANVAS_WIDTH}
+        height={CANVAS_HEIGHT}
+        style={{
+          background: '#000',
+          border: '2px solid #FFD700',
+          borderRadius: '8px',
+          transform: `scale(${scale})`,
+          transformOrigin: 'top left',
+          imageRendering: 'pixelated'
+        }}
+      />
+
       {isGameOver && (
         <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
+          position: 'fixed', 
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '100vw', 
           height: '100vh',
-          background: 'rgba(0,0,0,0.9)',
-          display: 'flex',
-          alignItems: 'center',
+          background: 'rgba(0,0,0,0.9)', 
+          display: 'flex', 
+          alignItems: 'center', 
           justifyContent: 'center',
-          color: 'white',
-          fontSize: '24px',
-          fontFamily: 'sans-serif',
-          zIndex: 10000
+          color: 'white', 
+          fontSize: '24px', 
+          fontFamily: 'sans-serif', 
+          zIndex: 99999,
+          margin: 0,
+          padding: 0
         }}>
           <div style={{
             background: '#333',
@@ -1076,8 +1079,8 @@ export default function CanvasPacman({
             border: '2px solid #FFD700',
             minWidth: '300px',
             position: 'relative',
-            maxWidth: '90vw',
-            maxHeight: '90vh'
+            maxWidth: '500px',
+            width: '90%'
           }}>
             <button
               onClick={() => { setIsGameOver(false); }}

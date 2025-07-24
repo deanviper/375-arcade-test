@@ -144,15 +144,17 @@ export default function Page() {
     let availableWidth = width;
     
     // Scale everything based on available space
-    let titleScale = 0.7; // Reduced from previous sizes
+    let titleScale = 0.7; // Base scale for landing pages
+    let titleScaleGameplay = 0.4; // Smaller scale for gameplay
     let carouselScale = 1;
-    let carouselHeight = 220; // Reduced height for horizontal layout
+    let carouselHeight = 220;
     let carouselWidth = 600;
     let gameScale = 1;
     
     // Very small screens (tablets in portrait)
     if (width < 768) {
       titleScale = 0.5;
+      titleScaleGameplay = 0.3;
       carouselScale = 0.8;
       carouselHeight = 180;
       carouselWidth = 320;
@@ -163,6 +165,7 @@ export default function Page() {
     // Medium screens (tablets in landscape, small laptops)
     else if (width < 1024) {
       titleScale = 0.6;
+      titleScaleGameplay = 0.35;
       carouselScale = 0.9;
       carouselHeight = 200;
       carouselWidth = 500;
@@ -171,6 +174,7 @@ export default function Page() {
     // Small laptops
     else if (width < 1366) {
       titleScale = 0.65;
+      titleScaleGameplay = 0.4;
       carouselScale = 0.95;
       carouselHeight = 210;
       carouselWidth = 550;
@@ -178,7 +182,8 @@ export default function Page() {
     }
     // Large screens
     else if (width >= 1920) {
-      titleScale = 0.8;
+      titleScale = 0.95; // Increased by 20% from 0.8
+      titleScaleGameplay = 0.5;
       carouselScale = 1.1;
       carouselHeight = 240;
       carouselWidth = 650;
@@ -188,11 +193,13 @@ export default function Page() {
     // Height-based adjustments
     if (height < 700) {
       titleScale *= 0.8;
+      titleScaleGameplay *= 0.8;
       carouselScale *= 0.8;
       carouselHeight *= 0.8;
       gameScale *= 0.8;
     } else if (height < 800) {
       titleScale *= 0.9;
+      titleScaleGameplay *= 0.9;
       carouselScale *= 0.9;
       carouselHeight *= 0.9;
       gameScale *= 0.9;
@@ -204,6 +211,7 @@ export default function Page() {
       availableHeight: height - headerHeight - footerHeight,
       availableWidth,
       titleScale,
+      titleScaleGameplay,
       carouselScale,
       carouselHeight,
       carouselWidth,
@@ -421,7 +429,7 @@ export default function Page() {
           overflow: 'hidden'
         }}>
           <div style={{
-            transform: `scale(${responsiveConfig.titleScale * 1.5})`, // 50% bigger total (30% + 20% more)
+            transform: `scale(${responsiveConfig.titleScale * 1.2})`, // Increased by 20% from previous 1.5x
             marginBottom: `${30 * responsiveConfig.titleScale}px`,
             transformOrigin: 'center center'
           }}>
@@ -524,7 +532,7 @@ export default function Page() {
           overflow: 'hidden'
         }}>
           <div style={{
-            transform: `scale(${responsiveConfig.titleScale * 1.5})`, // 50% bigger total (30% + 20% more)
+            transform: `scale(${responsiveConfig.titleScale * 1.2})`, // Increased by 20% from previous 1.5x
             marginBottom: `${30 * responsiveConfig.titleScale}px`,
             transformOrigin: 'center center'
           }}>
@@ -564,17 +572,18 @@ export default function Page() {
     return (
       <div style={containerStyle}>
         <style>{mobileStyles}</style>
+        
+        {/* Arcade title positioned at left-center, large */}
         <div style={{
           position: 'absolute',
           top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
+          left: '40px',
+          transform: 'translateY(-50%)',
           zIndex: 1000
         }}>
           <div style={{
-            transform: `scale(${responsiveConfig.titleScale * 0.8})`,
-            transformOrigin: 'center center',
-            marginBottom: '30px'
+            transform: `scale(${responsiveConfig.titleScaleGameplay * 2.4})`, // Increased by 20% from 2.0 to 2.4
+            transformOrigin: 'left center'
           }}>
             <img
               src="/arcade-title.png"
@@ -621,22 +630,24 @@ export default function Page() {
     return (
       <div style={containerStyle}>
         <style>{mobileStyles}</style>
+        
+        {/* Arcade title positioned at left-center, large - same position as ready screen */}
         <div style={{
           position: 'absolute',
-          top: '20px',
-          left: '50%',
-          transform: 'translateX(-50%)',
+          top: '50%',
+          left: '40px',
+          transform: 'translateY(-50%)',
           zIndex: 1000
         }}>
           <div style={{
-            transform: `scale(${responsiveConfig.titleScale * 0.6})`,
-            transformOrigin: 'center center'
+            transform: `scale(${responsiveConfig.titleScaleGameplay * 2.4})`, // Increased by 20% from 2.0 to 2.4
+            transformOrigin: 'left center'
           }}>
             <img
               src="/arcade-title.png"
               alt="375 Arcade - Built on Irys"
               style={{
-                maxWidth: '250px',
+                maxWidth: '300px',
                 width: '100%',
                 height: 'auto',
                 filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'

@@ -677,8 +677,9 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
             isGameOver && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     position: 'fixed',
-                    top: 0,
-                    left: 0,
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
                     width: '100vw',
                     height: '100vh',
                     background: 'rgba(0,0,0,0.9)',
@@ -735,7 +736,7 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 538,
+                            lineNumber: 539,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -746,7 +747,7 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                             children: "Game Over!"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 567,
+                            lineNumber: 568,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -765,13 +766,13 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                                             children: scoreRef.current
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasTetris.tsx",
-                                            lineNumber: 569,
+                                            lineNumber: 570,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 569,
+                                    lineNumber: 570,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -784,13 +785,13 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                                             children: linesRef.current
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasTetris.tsx",
-                                            lineNumber: 570,
+                                            lineNumber: 571,
                                             columnNumber: 35
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 570,
+                                    lineNumber: 571,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -803,19 +804,19 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                                             children: levelRef.current
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasTetris.tsx",
-                                            lineNumber: 571,
+                                            lineNumber: 572,
                                             columnNumber: 35
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 571,
+                                    lineNumber: 572,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 568,
+                            lineNumber: 569,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -840,7 +841,7 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                                     children: "Play Again"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 575,
+                                    lineNumber: 576,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -857,7 +858,7 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                                     children: "🐦 Tweet Score"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 580,
+                                    lineNumber: 581,
                                     columnNumber: 15
                                 }, this),
                                 playerAddress && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -876,13 +877,13 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                                     children: isPublishing ? '⏳ Publishing...' : '🏆 Publish to Leaderboards'
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasTetris.tsx",
-                                    lineNumber: 586,
+                                    lineNumber: 587,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 574,
+                            lineNumber: 575,
                             columnNumber: 13
                         }, this),
                         isPublishing && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -894,13 +895,13 @@ function CanvasTetris({ onGameOver, start, onPlayAgain, onPublishScore, playerAd
                             children: "Sign the transaction in your wallet to publish your score to the blockchain"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasTetris.tsx",
-                            lineNumber: 599,
+                            lineNumber: 600,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/CanvasTetris.tsx",
-                    lineNumber: 527,
+                    lineNumber: 528,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
@@ -2429,30 +2430,12 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
         },
         className: "jsx-a58dbfef7be8da39",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("canvas", {
-                ref: canvasRef,
-                width: CANVAS_WIDTH,
-                height: CANVAS_HEIGHT,
-                style: {
-                    background: '#000',
-                    border: '2px solid #FFD700',
-                    borderRadius: '8px',
-                    transform: `scale(${scale})`,
-                    transformOrigin: 'top left',
-                    imageRendering: 'pixelated'
-                },
-                className: "jsx-a58dbfef7be8da39"
-            }, void 0, false, {
-                fileName: "[project]/components/CanvasPacman.tsx",
-                lineNumber: 990,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     position: 'absolute',
-                    top: `${-5}px`,
-                    left: '0',
-                    right: '0',
+                    top: `${-60 * scale}px`,
+                    left: '50%',
+                    transform: 'translateX(-50%)',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -2485,7 +2468,7 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1030,
+                            lineNumber: 1016,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2496,7 +2479,7 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1031,
+                            lineNumber: 1017,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2514,24 +2497,24 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1032,
+                            lineNumber: 1018,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/CanvasPacman.tsx",
-                    lineNumber: 1016,
+                    lineNumber: 1002,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/CanvasPacman.tsx",
-                lineNumber: 1005,
+                lineNumber: 991,
                 columnNumber: 7
             }, this),
             gameStateRef.current.powerMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     position: 'absolute',
-                    top: `${-80 * scale}px`,
+                    top: `${-100 * scale}px`,
                     left: '50%',
                     transform: 'translateX(-50%)',
                     color: '#00FFFF',
@@ -2548,14 +2531,33 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/CanvasPacman.tsx",
-                lineNumber: 1040,
+                lineNumber: 1026,
                 columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("canvas", {
+                ref: canvasRef,
+                width: CANVAS_WIDTH,
+                height: CANVAS_HEIGHT,
+                style: {
+                    background: '#000',
+                    border: '2px solid #FFD700',
+                    borderRadius: '8px',
+                    transform: `scale(${scale})`,
+                    transformOrigin: 'top left',
+                    imageRendering: 'pixelated'
+                },
+                className: "jsx-a58dbfef7be8da39"
+            }, void 0, false, {
+                fileName: "[project]/components/CanvasPacman.tsx",
+                lineNumber: 1041,
+                columnNumber: 7
             }, this),
             isGameOver && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
                     position: 'fixed',
-                    top: 0,
-                    left: 0,
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
                     width: '100vw',
                     height: '100vh',
                     background: 'rgba(0,0,0,0.9)',
@@ -2565,7 +2567,9 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                     color: 'white',
                     fontSize: '24px',
                     fontFamily: 'sans-serif',
-                    zIndex: 10000
+                    zIndex: 99999,
+                    margin: 0,
+                    padding: 0
                 },
                 className: "jsx-a58dbfef7be8da39",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2577,8 +2581,8 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                         border: '2px solid #FFD700',
                         minWidth: '300px',
                         position: 'relative',
-                        maxWidth: '90vw',
-                        maxHeight: '90vh'
+                        maxWidth: '500px',
+                        width: '90%'
                     },
                     className: "jsx-a58dbfef7be8da39",
                     children: [
@@ -2615,7 +2619,7 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1082,
+                            lineNumber: 1085,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2627,7 +2631,7 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                             children: "Game Over!"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1113,
+                            lineNumber: 1116,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2649,13 +2653,13 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                                             children: gameStateRef.current.score.toLocaleString()
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasPacman.tsx",
-                                            lineNumber: 1115,
+                                            lineNumber: 1118,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1115,
+                                    lineNumber: 1118,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2670,19 +2674,19 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                                             children: gameStateRef.current.level
                                         }, void 0, false, {
                                             fileName: "[project]/components/CanvasPacman.tsx",
-                                            lineNumber: 1116,
+                                            lineNumber: 1119,
                                             columnNumber: 35
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1116,
+                                    lineNumber: 1119,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1114,
+                            lineNumber: 1117,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2709,7 +2713,7 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                                     children: "Play Again"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1120,
+                                    lineNumber: 1123,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2727,7 +2731,7 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                                     children: "🐦 Tweet Score"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1135,
+                                    lineNumber: 1138,
                                     columnNumber: 15
                                 }, this),
                                 playerAddress && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2747,13 +2751,13 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                                     children: isPublishing ? '⏳ Publishing...' : '🏆 Publish to Leaderboards'
                                 }, void 0, false, {
                                     fileName: "[project]/components/CanvasPacman.tsx",
-                                    lineNumber: 1151,
+                                    lineNumber: 1154,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1119,
+                            lineNumber: 1122,
                             columnNumber: 13
                         }, this),
                         isPublishing && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2766,13 +2770,13 @@ function CanvasPacman({ start, onGameOver, onPlayAgain, onPublishScore, playerAd
                             children: "Sign the transaction in your wallet to publish your score to the blockchain"
                         }, void 0, false, {
                             fileName: "[project]/components/CanvasPacman.tsx",
-                            lineNumber: 1171,
+                            lineNumber: 1174,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/CanvasPacman.tsx",
-                    lineNumber: 1071,
+                    lineNumber: 1074,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
@@ -2871,8 +2875,8 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                id: "c09377d4c3f6be0d",
-                children: ".header-button-hover.jsx-c09377d4c3f6be0d{transition:all .4s cubic-bezier(.4,0,.2,1)!important}.header-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,#ff3d144d 0%,#ff3d141a 100%)!important;border:2px solid #ff3d1480!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px #ff3d144d!important}.faucet-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,#50ffd64d 0%,#50ffd61a 100%)!important;border:2px solid #50ffd680!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px #50ffd64d!important}.global-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,#9ca3af4d 0%,#9ca3af1a 100%)!important;border:2px solid #9ca3af80!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px #9ca3af4d!important}.dropdown-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,#ffd7004d 0%,#ffd7001a 100%)!important;border:2px solid #ffd70080!important;transform:translateY(-2px)!important;box-shadow:0 4px 15px #ffd7004d!important}.disconnect-button-hover.jsx-c09377d4c3f6be0d{transition:all .3s!important}.disconnect-button-hover.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,#ef444466 0%,#ef44441a 100%)!important;border:1px solid #ef444480!important;transform:translateY(-1px)!important;box-shadow:0 2px 10px #ef44444d!important}.wallet-address-display.jsx-c09377d4c3f6be0d{transition:all .3s!important}.wallet-address-display.jsx-c09377d4c3f6be0d:hover{background:linear-gradient(135deg,#50ffd64d 0%,#50ffd61a 100%)!important;border:1px solid #50ffd680!important;transform:translateY(-1px)!important;box-shadow:0 2px 10px #50ffd64d!important}.dropdown-menu.jsx-c09377d4c3f6be0d{backdrop-filter:blur(12px);z-index:1200;background:linear-gradient(135deg,#08080cf2 0%,#0f0f14f2 100%);border:1px solid #ffd7004d;border-radius:8px;min-width:150px;margin-top:5px;position:absolute;top:100%;left:0;box-shadow:0 8px 25px #00000080}.dropdown-item.jsx-c09377d4c3f6be0d{color:#e5e7eb;border-bottom:1px solid #ffd7001a;padding:10px 16px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;display:block}.dropdown-item.jsx-c09377d4c3f6be0d:last-child{border-bottom:none}.dropdown-item.jsx-c09377d4c3f6be0d:hover{color:gold;background:linear-gradient(135deg,#ffd70033 0%,#ffd7001a 100%)}"
+                id: "2e687465ab089a90",
+                children: ".header-button-hover.jsx-2e687465ab089a90{transition:all .4s cubic-bezier(.4,0,.2,1)!important}.header-button-hover.jsx-2e687465ab089a90:hover{transform:translateY(-2px)!important}.home-button-hover.jsx-2e687465ab089a90:hover{background:linear-gradient(135deg,#9ca3af4d 0%,#9ca3af1a 100%)!important;border:2px solid #9ca3af80!important;box-shadow:0 4px 15px #9ca3af4d!important}.faucet-button-hover.jsx-2e687465ab089a90:hover,.irys-button-hover.jsx-2e687465ab089a90:hover{background:linear-gradient(135deg,#50ffd64d 0%,#50ffd61a 100%)!important;border:2px solid #50ffd680!important;box-shadow:0 4px 15px #50ffd64d!important}.ai375-button-hover.jsx-2e687465ab089a90:hover,.global-button-hover.jsx-2e687465ab089a90:hover{background:linear-gradient(135deg,#ff3d144d 0%,#ff3d141a 100%)!important;border:2px solid #ff3d1480!important;box-shadow:0 4px 15px #ff3d144d!important}.disconnect-button-hover.jsx-2e687465ab089a90{transition:all .3s!important}.disconnect-button-hover.jsx-2e687465ab089a90:hover{background:linear-gradient(135deg,#ef444466 0%,#ef44441a 100%)!important;border:1px solid #ef444480!important;transform:translateY(-1px)!important;box-shadow:0 2px 10px #ef44444d!important}.wallet-address-display.jsx-2e687465ab089a90{transition:all .3s!important}.wallet-address-display.jsx-2e687465ab089a90:hover{background:linear-gradient(135deg,#50ffd64d 0%,#50ffd61a 100%)!important;border:1px solid #50ffd680!important;transform:translateY(-1px)!important;box-shadow:0 2px 10px #50ffd64d!important}.dropdown-menu.jsx-2e687465ab089a90{backdrop-filter:blur(12px);z-index:1200;opacity:0;background:linear-gradient(135deg,#08080cf2 0%,#0f0f14f2 100%);border:1px solid #50ffd64d;border-radius:8px;min-width:150px;margin-top:2px;animation:.2s ease-out forwards dropdownSlideIn;position:absolute;top:100%;left:50%;transform:translate(-50%)translateY(-10px);box-shadow:0 8px 25px #00000080}@keyframes dropdownSlideIn{0%{opacity:0;transform:translate(-50%)translateY(-10px)}to{opacity:1;transform:translate(-50%)translateY(0)}}.dropdown-item.jsx-2e687465ab089a90{color:#e5e7eb;text-align:center;cursor:pointer;border-bottom:1px solid #50ffd61a;justify-content:center;align-items:center;padding:12px 20px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;display:flex}.dropdown-item.jsx-2e687465ab089a90:last-child{border-bottom:none}.dropdown-item.jsx-2e687465ab089a90:hover{color:#50ffd6;background:linear-gradient(135deg,#50ffd633 0%,#50ffd61a 100%)}"
             }, void 0, false, void 0, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -2891,7 +2895,7 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                     flexWrap: 'wrap',
                     gap: '10px'
                 },
-                className: "jsx-c09377d4c3f6be0d",
+                className: "jsx-2e687465ab089a90",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
@@ -2899,34 +2903,34 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                             alignItems: 'center',
                             gap: '20px'
                         },
-                        className: "jsx-c09377d4c3f6be0d",
+                        className: "jsx-2e687465ab089a90",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
                                 display: 'flex',
                                 gap: '16px',
                                 flexWrap: 'wrap'
                             },
-                            className: "jsx-c09377d4c3f6be0d",
+                            className: "jsx-2e687465ab089a90",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: onHomeClick,
                                     style: {
-                                        background: 'linear-gradient(135deg, rgba(255, 61, 20, 0.15) 0%, rgba(255, 61, 20, 0.05) 100%)',
+                                        background: 'linear-gradient(135deg, rgba(156, 163, 175, 0.15) 0%, rgba(156, 163, 175, 0.05) 100%)',
                                         border: '2px solid transparent',
                                         borderRadius: '12px',
                                         padding: '10px 20px',
-                                        color: '#FF3D14',
+                                        color: '#9CA3AF',
                                         fontSize: responsiveStyles.fontSize,
                                         fontWeight: 600,
                                         cursor: 'pointer',
                                         textTransform: 'uppercase',
                                         letterSpacing: '0.5px'
                                     },
-                                    className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover",
-                                    children: "Home"
+                                    className: "jsx-2e687465ab089a90" + " " + "header-button-hover home-button-hover",
+                                    children: "HOME"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                    lineNumber: 131,
+                                    lineNumber: 149,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2935,63 +2939,65 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                                     },
                                     onMouseEnter: ()=>handleMouseEnter('375ai'),
                                     onMouseLeave: handleMouseLeave,
-                                    className: "jsx-c09377d4c3f6be0d",
+                                    className: "jsx-2e687465ab089a90",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             style: {
-                                                background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%)',
+                                                background: 'linear-gradient(135deg, rgba(255, 61, 20, 0.15) 0%, rgba(255, 61, 20, 0.05) 100%)',
                                                 border: '2px solid transparent',
                                                 borderRadius: '12px',
                                                 padding: '10px 20px',
-                                                color: '#FFD700',
+                                                color: '#FF3D14',
                                                 fontSize: responsiveStyles.fontSize,
                                                 fontWeight: 600,
                                                 cursor: 'pointer',
                                                 textTransform: 'uppercase',
                                                 letterSpacing: '0.5px'
                                             },
-                                            className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover dropdown-button-hover",
+                                            className: "jsx-2e687465ab089a90" + " " + "header-button-hover ai375-button-hover",
                                             children: "What is 375ai? ▼"
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                            lineNumber: 155,
+                                            lineNumber: 173,
                                             columnNumber: 15
                                         }, this),
                                         activeDropdown === '375ai' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-menu",
+                                            onMouseEnter: ()=>handleMouseEnter('375ai'),
+                                            onMouseLeave: handleMouseLeave,
+                                            className: "jsx-2e687465ab089a90" + " " + "dropdown-menu",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "https://375.ai/about",
                                                     target: "_blank",
                                                     rel: "noopener noreferrer",
-                                                    className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-item",
-                                                    children: "📋 ABOUT"
+                                                    className: "jsx-2e687465ab089a90" + " " + "dropdown-item",
+                                                    children: "ABOUT"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                                    lineNumber: 174,
+                                                    lineNumber: 196,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "https://x.com/375ai_",
                                                     target: "_blank",
                                                     rel: "noopener noreferrer",
-                                                    className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-item",
-                                                    children: "🐦 X (TWITTER)"
+                                                    className: "jsx-2e687465ab089a90" + " " + "dropdown-item",
+                                                    children: "X"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                                    lineNumber: 182,
+                                                    lineNumber: 204,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                            lineNumber: 173,
+                                            lineNumber: 191,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                    lineNumber: 150,
+                                    lineNumber: 168,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3000,63 +3006,65 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                                     },
                                     onMouseEnter: ()=>handleMouseEnter('irys'),
                                     onMouseLeave: handleMouseLeave,
-                                    className: "jsx-c09377d4c3f6be0d",
+                                    className: "jsx-2e687465ab089a90",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             style: {
-                                                background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%)',
+                                                background: 'linear-gradient(135deg, rgba(80, 255, 214, 0.15) 0%, rgba(80, 255, 214, 0.05) 100%)',
                                                 border: '2px solid transparent',
                                                 borderRadius: '12px',
                                                 padding: '10px 20px',
-                                                color: '#FFD700',
+                                                color: '#50FFD6',
                                                 fontSize: responsiveStyles.fontSize,
                                                 fontWeight: 600,
                                                 cursor: 'pointer',
                                                 textTransform: 'uppercase',
                                                 letterSpacing: '0.5px'
                                             },
-                                            className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover dropdown-button-hover",
+                                            className: "jsx-2e687465ab089a90" + " " + "header-button-hover irys-button-hover",
                                             children: "What is Irys? ▼"
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                            lineNumber: 199,
+                                            lineNumber: 221,
                                             columnNumber: 15
                                         }, this),
                                         activeDropdown === 'irys' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-menu",
+                                            onMouseEnter: ()=>handleMouseEnter('irys'),
+                                            onMouseLeave: handleMouseLeave,
+                                            className: "jsx-2e687465ab089a90" + " " + "dropdown-menu",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "https://docs.irys.xyz/learn/what/what-irys-is",
                                                     target: "_blank",
                                                     rel: "noopener noreferrer",
-                                                    className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-item",
-                                                    children: "📋 ABOUT"
+                                                    className: "jsx-2e687465ab089a90" + " " + "dropdown-item",
+                                                    children: "ABOUT"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                                    lineNumber: 218,
+                                                    lineNumber: 244,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "https://x.com/irys_xyz",
                                                     target: "_blank",
                                                     rel: "noopener noreferrer",
-                                                    className: "jsx-c09377d4c3f6be0d" + " " + "dropdown-item",
-                                                    children: "🐦 X (TWITTER)"
+                                                    className: "jsx-2e687465ab089a90" + " " + "dropdown-item",
+                                                    children: "X"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                                    lineNumber: 226,
+                                                    lineNumber: 252,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                            lineNumber: 217,
+                                            lineNumber: 239,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                    lineNumber: 194,
+                                    lineNumber: 216,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3073,43 +3081,43 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                                         textTransform: 'uppercase',
                                         letterSpacing: '0.5px'
                                     },
-                                    className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover faucet-button-hover",
-                                    children: "Faucet"
+                                    className: "jsx-2e687465ab089a90" + " " + "header-button-hover faucet-button-hover",
+                                    children: "FAUCET"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                    lineNumber: 238,
+                                    lineNumber: 264,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: ()=>window.open('https://375ai-leaderboards.vercel.app/', '_blank'),
                                     style: {
-                                        background: 'linear-gradient(135deg, rgba(156, 163, 175, 0.15) 0%, rgba(156, 163, 175, 0.05) 100%)',
+                                        background: 'linear-gradient(135deg, rgba(255, 61, 20, 0.15) 0%, rgba(255, 61, 20, 0.05) 100%)',
                                         border: '2px solid transparent',
                                         borderRadius: '12px',
                                         padding: '10px 20px',
-                                        color: '#9CA3AF',
+                                        color: '#FF3D14',
                                         fontSize: responsiveStyles.fontSize,
                                         fontWeight: 600,
                                         cursor: 'pointer',
                                         textTransform: 'uppercase',
                                         letterSpacing: '0.5px'
                                     },
-                                    className: "jsx-c09377d4c3f6be0d" + " " + "header-button-hover global-button-hover",
-                                    children: "Global Leaderboards"
+                                    className: "jsx-2e687465ab089a90" + " " + "header-button-hover global-button-hover",
+                                    children: "GLOBAL LEADERBOARDS"
                                 }, void 0, false, {
                                     fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                    lineNumber: 256,
+                                    lineNumber: 282,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/layout/NavigationHeader.tsx",
-                            lineNumber: 130,
+                            lineNumber: 148,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/layout/NavigationHeader.tsx",
-                        lineNumber: 129,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this),
                     address && isConnected && authed && !isOfflineMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3118,7 +3126,7 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                             alignItems: 'center',
                             gap: '12px'
                         },
-                        className: "jsx-c09377d4c3f6be0d",
+                        className: "jsx-2e687465ab089a90",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 style: {
@@ -3138,7 +3146,7 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                                     navigator.clipboard.writeText(address);
                                 // You could add a toast notification here
                                 },
-                                className: "jsx-c09377d4c3f6be0d" + " " + "wallet-address-display",
+                                className: "jsx-2e687465ab089a90" + " " + "wallet-address-display",
                                 children: [
                                     address.slice(0, 6),
                                     "...",
@@ -3146,7 +3154,7 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                lineNumber: 279,
+                                lineNumber: 305,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3163,23 +3171,23 @@ function NavigationHeader({ onHomeClick, onDisconnectWallet, address, isConnecte
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.5px'
                                 },
-                                className: "jsx-c09377d4c3f6be0d" + " " + "disconnect-button-hover",
+                                className: "jsx-2e687465ab089a90" + " " + "disconnect-button-hover",
                                 children: "Disconnect"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/NavigationHeader.tsx",
-                                lineNumber: 301,
+                                lineNumber: 327,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/layout/NavigationHeader.tsx",
-                        lineNumber: 278,
+                        lineNumber: 304,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/layout/NavigationHeader.tsx",
-                lineNumber: 113,
+                lineNumber: 131,
                 columnNumber: 7
             }, this)
         ]
@@ -4009,7 +4017,8 @@ function GameCarousel({ onGameSelect, onWalletConnection, onOfflinePlay, isProce
                                     flexDirection: 'column',
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    paddingLeft: '20px'
+                                    paddingLeft: '20px',
+                                    marginLeft: '-50px'
                                 },
                                 className: "jsx-93efdeb5722ddeb6",
                                 children: [
@@ -5241,14 +5250,16 @@ function Page() {
         let availableHeight = height - headerHeight - footerHeight;
         let availableWidth = width;
         // Scale everything based on available space
-        let titleScale = 0.7; // Reduced from previous sizes
+        let titleScale = 0.7; // Base scale for landing pages
+        let titleScaleGameplay = 0.4; // Smaller scale for gameplay
         let carouselScale = 1;
-        let carouselHeight = 220; // Reduced height for horizontal layout
+        let carouselHeight = 220;
         let carouselWidth = 600;
         let gameScale = 1;
         // Very small screens (tablets in portrait)
         if (width < 768) {
             titleScale = 0.5;
+            titleScaleGameplay = 0.3;
             carouselScale = 0.8;
             carouselHeight = 180;
             carouselWidth = 320;
@@ -5257,18 +5268,21 @@ function Page() {
             footerHeight = 50;
         } else if (width < 1024) {
             titleScale = 0.6;
+            titleScaleGameplay = 0.35;
             carouselScale = 0.9;
             carouselHeight = 200;
             carouselWidth = 500;
             gameScale = 0.9;
         } else if (width < 1366) {
             titleScale = 0.65;
+            titleScaleGameplay = 0.4;
             carouselScale = 0.95;
             carouselHeight = 210;
             carouselWidth = 550;
             gameScale = 0.95;
         } else if (width >= 1920) {
-            titleScale = 0.8;
+            titleScale = 0.95; // Increased by 20% from 0.8
+            titleScaleGameplay = 0.5;
             carouselScale = 1.1;
             carouselHeight = 240;
             carouselWidth = 650;
@@ -5277,11 +5291,13 @@ function Page() {
         // Height-based adjustments
         if (height < 700) {
             titleScale *= 0.8;
+            titleScaleGameplay *= 0.8;
             carouselScale *= 0.8;
             carouselHeight *= 0.8;
             gameScale *= 0.8;
         } else if (height < 800) {
             titleScale *= 0.9;
+            titleScaleGameplay *= 0.9;
             carouselScale *= 0.9;
             carouselHeight *= 0.9;
             gameScale *= 0.9;
@@ -5292,6 +5308,7 @@ function Page() {
             availableHeight: height - headerHeight - footerHeight,
             availableWidth,
             titleScale,
+            titleScaleGameplay,
             carouselScale,
             carouselHeight,
             carouselWidth,
@@ -5435,7 +5452,7 @@ function Page() {
                     children: mobileStyles
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 356,
+                    lineNumber: 364,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5447,7 +5464,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 357,
+                    lineNumber: 365,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5460,23 +5477,23 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 365,
+                    lineNumber: 373,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$modals$2f$NetworkSwitchModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 374,
+                    lineNumber: 382,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 375,
+                    lineNumber: 383,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 355,
+            lineNumber: 363,
             columnNumber: 7
         }, this);
     }
@@ -5489,7 +5506,7 @@ function Page() {
                     children: mobileStyles
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 384,
+                    lineNumber: 392,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5501,7 +5518,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 385,
+                    lineNumber: 393,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5514,7 +5531,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 393,
+                    lineNumber: 401,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5527,18 +5544,18 @@ function Page() {
                             leaderboard: leaderboard
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 405,
+                            lineNumber: 413,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 406,
+                            lineNumber: 414,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 404,
+                    lineNumber: 412,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5559,7 +5576,7 @@ function Page() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                transform: `scale(${responsiveConfig.titleScale * 1.5})`,
+                                transform: `scale(${responsiveConfig.titleScale * 1.2})`,
                                 marginBottom: `${30 * responsiveConfig.titleScale}px`,
                                 transformOrigin: 'center center'
                             },
@@ -5574,12 +5591,12 @@ function Page() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 428,
+                                lineNumber: 436,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 423,
+                            lineNumber: 431,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5595,29 +5612,29 @@ function Page() {
                                 showPaymentButtons: false
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 444,
+                                lineNumber: 452,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 440,
+                            lineNumber: 448,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 410,
+                    lineNumber: 418,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 454,
+                    lineNumber: 462,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 383,
+            lineNumber: 391,
             columnNumber: 7
         }, this);
     }
@@ -5630,7 +5647,7 @@ function Page() {
                     children: mobileStyles
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 463,
+                    lineNumber: 471,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5642,7 +5659,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 464,
+                    lineNumber: 472,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5655,7 +5672,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 472,
+                    lineNumber: 480,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$modals$2f$AuthenticationModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5663,18 +5680,18 @@ function Page() {
                     onAuthenticate: handleAuthentication
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 481,
+                    lineNumber: 489,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 485,
+                    lineNumber: 493,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 462,
+            lineNumber: 470,
             columnNumber: 7
         }, this);
     }
@@ -5687,7 +5704,7 @@ function Page() {
                     children: mobileStyles
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 494,
+                    lineNumber: 502,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5699,7 +5716,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 495,
+                    lineNumber: 503,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5712,7 +5729,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 503,
+                    lineNumber: 511,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5732,7 +5749,7 @@ function Page() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                transform: `scale(${responsiveConfig.titleScale * 1.5})`,
+                                transform: `scale(${responsiveConfig.titleScale * 1.2})`,
                                 marginBottom: `${30 * responsiveConfig.titleScale}px`,
                                 transformOrigin: 'center center'
                             },
@@ -5747,12 +5764,12 @@ function Page() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 531,
+                                lineNumber: 539,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 526,
+                            lineNumber: 534,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5768,29 +5785,29 @@ function Page() {
                                 showPaymentButtons: true
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 547,
+                                lineNumber: 555,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 543,
+                            lineNumber: 551,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 513,
+                    lineNumber: 521,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 557,
+                    lineNumber: 565,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 493,
+            lineNumber: 501,
             columnNumber: 7
         }, this);
     }
@@ -5803,22 +5820,21 @@ function Page() {
                     children: mobileStyles
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 566,
+                    lineNumber: 574,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         position: 'absolute',
                         top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
+                        left: '40px',
+                        transform: 'translateY(-50%)',
                         zIndex: 1000
                     },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            transform: `scale(${responsiveConfig.titleScale * 0.8})`,
-                            transformOrigin: 'center center',
-                            marginBottom: '30px'
+                            transform: `scale(${responsiveConfig.titleScaleGameplay * 2.4})`,
+                            transformOrigin: 'left center'
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                             src: "/arcade-title.png",
@@ -5831,17 +5847,17 @@ function Page() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 579,
+                            lineNumber: 588,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 574,
+                        lineNumber: 584,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 567,
+                    lineNumber: 577,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5853,7 +5869,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 592,
+                    lineNumber: 601,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5866,7 +5882,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 600,
+                    lineNumber: 609,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$GameReadyScreen$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5875,18 +5891,18 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 609,
+                    lineNumber: 618,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 614,
+                    lineNumber: 623,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 565,
+            lineNumber: 573,
             columnNumber: 7
         }, this);
     }
@@ -5899,44 +5915,44 @@ function Page() {
                     children: mobileStyles
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 623,
+                    lineNumber: 632,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         position: 'absolute',
-                        top: '20px',
-                        left: '50%',
-                        transform: 'translateX(-50%)',
+                        top: '50%',
+                        left: '40px',
+                        transform: 'translateY(-50%)',
                         zIndex: 1000
                     },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            transform: `scale(${responsiveConfig.titleScale * 0.6})`,
-                            transformOrigin: 'center center'
+                            transform: `scale(${responsiveConfig.titleScaleGameplay * 2.4})`,
+                            transformOrigin: 'left center'
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                             src: "/arcade-title.png",
                             alt: "375 Arcade - Built on Irys",
                             style: {
-                                maxWidth: '250px',
+                                maxWidth: '300px',
                                 width: '100%',
                                 height: 'auto',
                                 filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
                             }
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 635,
+                            lineNumber: 646,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 631,
+                        lineNumber: 642,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 624,
+                    lineNumber: 635,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5948,7 +5964,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 648,
+                    lineNumber: 659,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -5961,7 +5977,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 656,
+                    lineNumber: 667,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5992,12 +6008,12 @@ function Page() {
                             playerAddress: isOfflineMode ? undefined : address
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 681,
+                            lineNumber: 692,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 677,
+                        lineNumber: 688,
                         columnNumber: 13
                     }, this) : selectedGame === 'pacman' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
@@ -6015,28 +6031,28 @@ function Page() {
                             playerAddress: isOfflineMode ? undefined : address
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 697,
+                            lineNumber: 708,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 693,
+                        lineNumber: 704,
                         columnNumber: 13
                     }, this) : null
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 665,
+                    lineNumber: 676,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 710,
+                    lineNumber: 721,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 622,
+            lineNumber: 631,
             columnNumber: 7
         }, this);
     }
@@ -6048,7 +6064,7 @@ function Page() {
                 children: mobileStyles
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 718,
+                lineNumber: 729,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -6060,7 +6076,7 @@ function Page() {
                 isOfflineMode: isOfflineMode
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 719,
+                lineNumber: 730,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -6073,7 +6089,7 @@ function Page() {
                 address: address
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 727,
+                lineNumber: 738,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6109,7 +6125,7 @@ function Page() {
                             children: "🔄"
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 759,
+                            lineNumber: 770,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -6119,7 +6135,7 @@ function Page() {
                             children: "Loading..."
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 760,
+                            lineNumber: 771,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6129,29 +6145,29 @@ function Page() {
                             children: "Initializing 375 Arcade..."
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 761,
+                            lineNumber: 772,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 748,
+                    lineNumber: 759,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 737,
+                lineNumber: 748,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 765,
+                lineNumber: 776,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 717,
+        lineNumber: 728,
         columnNumber: 5
     }, this);
 }
