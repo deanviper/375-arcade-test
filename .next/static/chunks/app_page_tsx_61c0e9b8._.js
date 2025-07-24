@@ -1,7 +1,7 @@
 (globalThis.TURBOPACK_CHUNK_LISTS = globalThis.TURBOPACK_CHUNK_LISTS || []).push({
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
-  "static/chunks/node_modules_ethers_lib_esm_index_1c552e88.js",
+  "static/chunks/node_modules_ethers_lib_esm_index_50b0c9d1.js",
   "static/chunks/_5fd6f601._.js",
   "static/chunks/node_modules_ethers_lib_esm_utils_072fb278._.js",
   "static/chunks/node_modules_ethers_lib_esm_abi_b5bc55b4._.js",

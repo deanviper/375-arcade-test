@@ -34,12 +34,29 @@ export default function Page() {
   const [gameOver, setGameOver] = useState(false);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [isOfflineMode, setIsOfflineMode] = useState(false);
+  const [viewportDimensions, setViewportDimensions] = useState({ width: 1920, height: 1080 });
 
   const { leaderboard, isLoadingLeaderboard, personalBests, refreshLeaderboard } = useLeaderboard(
     mounted, address, isConnected, isOfflineMode
   );
 
   useEffect(() => { setMounted(true); }, []);
+
+  // Track viewport dimensions
+  useEffect(() => {
+    if (!mounted) return;
+    
+    const updateDimensions = () => {
+      setViewportDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, [mounted]);
 
   useEffect(() => {
     if (!mounted || !address || !isConnected) return;
@@ -115,6 +132,87 @@ export default function Page() {
   }, [mounted]);
 
   if (!mounted) return null;
+
+  // Calculate responsive scaling
+  const getResponsiveConfig = () => {
+    const { width, height } = viewportDimensions;
+    
+    // Define breakpoints and scaling
+    let headerHeight = 70;
+    let footerHeight = 60;
+    let availableHeight = height - headerHeight - footerHeight;
+    let availableWidth = width;
+    
+    // Scale everything based on available space
+    let titleScale = 1;
+    let carouselScale = 1;
+    let carouselHeight = 450;
+    let carouselWidth = 400;
+    let gameScale = 1;
+    
+    // Very small screens (tablets in portrait)
+    if (width < 768) {
+      titleScale = 0.6;
+      carouselScale = 0.7;
+      carouselHeight = 320;
+      carouselWidth = 280;
+      gameScale = 0.8;
+      headerHeight = 60;
+      footerHeight = 50;
+    }
+    // Medium screens (tablets in landscape, small laptops)
+    else if (width < 1024) {
+      titleScale = 0.7;
+      carouselScale = 0.8;
+      carouselHeight = 380;
+      carouselWidth = 320;
+      gameScale = 0.9;
+    }
+    // Small laptops
+    else if (width < 1366) {
+      titleScale = 0.8;
+      carouselScale = 0.9;
+      carouselHeight = 420;
+      carouselWidth = 360;
+      gameScale = 0.95;
+    }
+    // Large screens
+    else if (width >= 1920) {
+      titleScale = 1.2;
+      carouselScale = 1.1;
+      carouselHeight = 500;
+      carouselWidth = 440;
+      gameScale = 1.1;
+    }
+    
+    // Height-based adjustments
+    if (height < 700) {
+      titleScale *= 0.8;
+      carouselScale *= 0.8;
+      carouselHeight *= 0.8;
+      gameScale *= 0.8;
+    } else if (height < 800) {
+      titleScale *= 0.9;
+      carouselScale *= 0.9;
+      carouselHeight *= 0.9;
+      gameScale *= 0.9;
+    }
+    
+    return {
+      headerHeight,
+      footerHeight,
+      availableHeight: height - headerHeight - footerHeight,
+      availableWidth,
+      titleScale,
+      carouselScale,
+      carouselHeight,
+      carouselWidth,
+      gameScale,
+      padding: Math.max(10, width * 0.02)
+    };
+  };
+
+  const responsiveConfig = getResponsiveConfig();
 
   const handleGamePayment = async (gameType: GameType) => {
     if (!gameType) return;
@@ -200,7 +298,6 @@ export default function Page() {
     setGameStarted(false);
     setGameOver(false);
     
-    // Force localStorage update
     try {
       localStorage.setItem(STORAGE_KEYS.IS_AUTHENTICATED, 'true');
       localStorage.setItem(STORAGE_KEYS.IS_PAID, 'true');
@@ -213,15 +310,19 @@ export default function Page() {
   };
 
   const containerStyle = {
-    minHeight: '100vh',
-    maxHeight: '100vh',
+    width: '100vw',
+    height: '100vh',
     background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2a2a2a 100%)',
     color: 'white',
     fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-    overflow: 'hidden'
-  } as const;
+    overflow: 'hidden',
+    position: 'fixed' as const,
+    top: 0,
+    left: 0
+  };
 
   const mobileStyles = `
+    /* Mobile Detection - Keep existing mobile logic */
     @media (max-width: 480px) {
       .mobile-message {
         display: flex !important;
@@ -231,92 +332,17 @@ export default function Page() {
       }
     }
     
-    /* iPad and Tablet Responsive Fixes */
-    @media (min-width: 481px) and (max-width: 1024px) {
-      .arcade-container {
-        padding: 80px 15px 60px !important;
-        height: 100vh !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-      }
-      
-      .arcade-title-fixed {
-        max-width: 300px !important;
-        margin-bottom: 20px !important;
-        transform: scale(0.8) !important;
-      }
-      
-      .carousel-container {
-        transform: scale(0.7) !important;
-        margin-top: -40px !important;
-      }
-      
-      .carousel-game-center {
-        min-width: 320px !important;
-        max-width: 350px !important;
-        height: 320px !important;
-      }
-      
-      .carousel-game-side {
-        min-width: 240px !important;
-        max-width: 260px !important;
-        height: 280px !important;
-      }
-      
-      .carousel-nav-button {
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 20px !important;
-      }
+    /* Remove all scrollbars */
+    * {
+      box-sizing: border-box;
     }
     
-    /* Specific fixes for landscape tablets */
-    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-      .arcade-container {
-        padding: 60px 15px 40px !important;
-      }
-      
-      .arcade-title-fixed {
-        max-width: 250px !important;
-        margin-bottom: 15px !important;
-        transform: scale(0.7) !important;
-      }
-      
-      .carousel-container {
-        transform: scale(0.6) !important;
-        margin-top: -60px !important;
-      }
-    }
-    
-    /* Standard responsive breakpoints */
-    @media (max-width: 1440px) {
-      .arcade-container {
-        padding: 120px 15px 120px !important;
-      }
-      .arcade-title-fixed {
-        max-width: 400px !important;
-        margin-bottom: 50px !important;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .arcade-container {
-        padding: 100px 10px 100px !important;
-      }
-      .arcade-title-fixed {
-        max-width: 280px !important;
-        margin-bottom: 30px !important;
-      }
-      .carousel-container {
-        flex-direction: column !important;
-        gap: 20px !important;
-      }
-      .carousel-game-center, .carousel-game-side {
-        min-width: 250px !important;
-        max-width: 280px !important;
-        height: 350px !important;
-      }
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
     }
   `;
 
@@ -327,6 +353,7 @@ export default function Page() {
   if (chainId && chainId !== 1270 && !isOfflineMode) {
     return (
       <div style={containerStyle}>
+        <style>{mobileStyles}</style>
         <NavigationHeader 
           onHomeClick={handleHomeClick}
           onDisconnectWallet={handleDisconnectWallet}
@@ -380,42 +407,51 @@ export default function Page() {
         </div>
 
         {/* Desktop Content */}
-        <div className="desktop-content arcade-container" style={{ 
-          padding: '130px 20px 120px', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          height: '100vh', 
-          position: 'relative',
-          flexDirection: 'column'
+        <div className="desktop-content" style={{
+          position: 'absolute',
+          top: `${responsiveConfig.headerHeight}px`,
+          left: 0,
+          right: 0,
+          bottom: `${responsiveConfig.footerHeight}px`,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: `${responsiveConfig.padding}px`,
+          overflow: 'hidden'
         }}>
-          <div style={{ width: '100%', maxWidth: '1200px', textAlign: 'center', marginTop: '-20px' }}>
-            <div style={{ marginBottom: '40px', position: 'relative', zIndex: 10 }}>
-              <img
-                src="/arcade-title.png"
-                alt="375 Arcade - Built on Irys"
-                className="arcade-title-fixed"
-                style={{
-                  maxWidth: '400px',
-                  width: '100%',
-                  height: 'auto',
-                  filter: 'drop-shadow(0 8px 16px rgba(255, 61, 20, 0.3))'
-                }}
-              />
-            </div>
-
-            <div className="carousel-container">
-              <GameCarousel 
-                onGameSelect={handleGamePayment}
-                onWalletConnection={handleWalletConnection}
-                onOfflinePlay={handleOfflinePlay}
-                isProcessingPayment={isProcessingPayment}
-                showPaymentButtons={false}
-              />
-            </div>
+          <div style={{
+            transform: `scale(${responsiveConfig.titleScale})`,
+            marginBottom: `${20 * responsiveConfig.titleScale}px`,
+            transformOrigin: 'center center'
+          }}>
+            <img
+              src="/arcade-title.png"
+              alt="375 Arcade - Built on Irys"
+              style={{
+                maxWidth: '400px',
+                width: '100%',
+                height: 'auto',
+                filter: 'drop-shadow(0 8px 16px rgba(255, 61, 20, 0.3))'
+              }}
+            />
           </div>
-          <Footer />
+          
+          <div style={{
+            transform: `scale(${responsiveConfig.carouselScale})`,
+            transformOrigin: 'center center'
+          }}>
+            <GameCarousel 
+              onGameSelect={handleGamePayment}
+              onWalletConnection={handleWalletConnection}
+              onOfflinePlay={handleOfflinePlay}
+              isProcessingPayment={isProcessingPayment}
+              showPaymentButtons={false}
+            />
+          </div>
         </div>
+        
+        <Footer />
       </div>
     );
   }
@@ -424,6 +460,7 @@ export default function Page() {
   if (!isAuthenticated && address && isConnected) {
     return (
       <div style={containerStyle}>
+        <style>{mobileStyles}</style>
         <NavigationHeader 
           onHomeClick={handleHomeClick}
           onDisconnectWallet={handleDisconnectWallet}
@@ -472,42 +509,52 @@ export default function Page() {
           personalBests={personalBests}
           address={address}
         />
-        <div className="arcade-container" style={{ 
-          padding: '70px 20px 80px', 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          height: '100vh', 
-          position: 'relative',
-          flexDirection: 'column'
+        
+        <div style={{
+          position: 'absolute',
+          top: `${responsiveConfig.headerHeight}px`,
+          left: 0,
+          right: 0,
+          bottom: `${responsiveConfig.footerHeight}px`,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: `${responsiveConfig.padding}px`,
+          overflow: 'hidden'
         }}>
-          <div style={{ width: '100%', maxWidth: '1200px', textAlign: 'center' }}>
-            <div style={{ marginBottom: '30px', position: 'relative', zIndex: 10 }}>
-              <img
-                src="/arcade-title.png"
-                alt="375 Arcade - Built on Irys"
-                className="arcade-title-fixed"
-                style={{
-                  maxWidth: '400px',
-                  width: '100%',
-                  height: 'auto',
-                  filter: 'drop-shadow(0 8px 16px rgba(255, 61, 20, 0.3))'
-                }}
-              />
-            </div>
-
-            <div className="carousel-container">
-              <GameCarousel 
-                onGameSelect={handleGamePayment}
-                onWalletConnection={handleWalletConnection}
-                onOfflinePlay={handleOfflinePlay}
-                isProcessingPayment={isProcessingPayment}
-                showPaymentButtons={true}
-              />
-            </div>
+          <div style={{
+            transform: `scale(${responsiveConfig.titleScale})`,
+            marginBottom: `${20 * responsiveConfig.titleScale}px`,
+            transformOrigin: 'center center'
+          }}>
+            <img
+              src="/arcade-title.png"
+              alt="375 Arcade - Built on Irys"
+              style={{
+                maxWidth: '400px',
+                width: '100%',
+                height: 'auto',
+                filter: 'drop-shadow(0 8px 16px rgba(255, 61, 20, 0.3))'
+              }}
+            />
           </div>
-          <Footer />
+          
+          <div style={{
+            transform: `scale(${responsiveConfig.carouselScale})`,
+            transformOrigin: 'center center'
+          }}>
+            <GameCarousel 
+              onGameSelect={handleGamePayment}
+              onWalletConnection={handleWalletConnection}
+              onOfflinePlay={handleOfflinePlay}
+              isProcessingPayment={isProcessingPayment}
+              showPaymentButtons={true}
+            />
+          </div>
         </div>
+        
+        <Footer />
       </div>
     );
   }
@@ -516,17 +563,20 @@ export default function Page() {
   if ((isOfflineMode || hasPaid) && selectedGame && !gameStarted && !gameOver) {
     return (
       <div style={containerStyle}>
+        <style>{mobileStyles}</style>
         <div style={{
-          position: 'fixed',
-          top: '140px',
-          left: '20px',
-          zIndex: 1000
+          position: 'absolute',
+          top: `${responsiveConfig.headerHeight + 10}px`,
+          left: `${responsiveConfig.padding}px`,
+          zIndex: 1000,
+          transform: `scale(${responsiveConfig.titleScale * 0.8})`,
+          transformOrigin: 'top left'
         }}>
           <img
             src="/arcade-title.png"
             alt="375 Arcade - Built on Irys"
             style={{
-              maxWidth: '500px',
+              maxWidth: '400px',
               width: '100%',
               height: 'auto',
               filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
@@ -565,17 +615,20 @@ export default function Page() {
   if (gameStarted || gameOver) {
     return (
       <div style={containerStyle}>
+        <style>{mobileStyles}</style>
         <div style={{
-          position: 'fixed',
-          top: '140px',
-          left: '20px',
-          zIndex: 1000
+          position: 'absolute',
+          top: `${responsiveConfig.headerHeight + 10}px`,
+          left: `${responsiveConfig.padding}px`,
+          zIndex: 1000,
+          transform: `scale(${responsiveConfig.titleScale * 0.7})`,
+          transformOrigin: 'top left'
         }}>
           <img
             src="/arcade-title.png"
             alt="375 Arcade - Built on Irys"
             style={{
-              maxWidth: '500px',
+              maxWidth: '400px',
               width: '100%',
               height: 'auto',
               filter: 'drop-shadow(0 4px 8px rgba(255, 61, 20, 0.3))'
@@ -601,36 +654,48 @@ export default function Page() {
           address={address}
         />
         <div style={{
-          padding: '80px 20px 20px',
+          position: 'absolute',
+          top: `${responsiveConfig.headerHeight}px`,
+          left: 0,
+          right: 0,
+          bottom: `${responsiveConfig.footerHeight}px`,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          minHeight: '100vh'
+          overflow: 'hidden'
         }}>
           {selectedGame === 'tetris' ? (
-            <CanvasTetris
-              start={gameStarted}
-              onGameOver={(score, lines) => {
-                setGameOver(true);
-                setGameStarted(false);
-                // Only clear payment state on refresh/page reload, not on game over
-              }}
-              onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('tetris')}
-              onPublishScore={handlePublishScore}
-              playerAddress={isOfflineMode ? undefined : address}
-            />
+            <div style={{
+              transform: `scale(${responsiveConfig.gameScale})`,
+              transformOrigin: 'center center'
+            }}>
+              <CanvasTetris
+                start={gameStarted}
+                onGameOver={(score, lines) => {
+                  setGameOver(true);
+                  setGameStarted(false);
+                }}
+                onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('tetris')}
+                onPublishScore={handlePublishScore}
+                playerAddress={isOfflineMode ? undefined : address}
+              />
+            </div>
           ) : selectedGame === 'pacman' ? (
-            <CanvasPacman
-              start={gameStarted}
-              onGameOver={(score, level) => {
-                setGameOver(true);
-                setGameStarted(false);
-                // Only clear payment state on refresh/page reload, not on game over
-              }}
-              onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('pacman')}
-              onPublishScore={handlePublishScore}
-              playerAddress={isOfflineMode ? undefined : address}
-            />
+            <div style={{
+              transform: `scale(${responsiveConfig.gameScale})`,
+              transformOrigin: 'center center'
+            }}>
+              <CanvasPacman
+                start={gameStarted}
+                onGameOver={(score, level) => {
+                  setGameOver(true);
+                  setGameStarted(false);
+                }}
+                onPlayAgain={isOfflineMode ? handleOfflineRestart : () => handleGamePayment('pacman')}
+                onPublishScore={handlePublishScore}
+                playerAddress={isOfflineMode ? undefined : address}
+              />
+            </div>
           ) : null}
         </div>
         <Footer />
@@ -641,6 +706,7 @@ export default function Page() {
   // Loading state
   return (
     <div style={containerStyle}>
+      <style>{mobileStyles}</style>
       <NavigationHeader 
         onHomeClick={handleHomeClick}
         onDisconnectWallet={handleDisconnectWallet}
@@ -658,22 +724,35 @@ export default function Page() {
         personalBests={personalBests}
         address={address}
       />
-      <div style={{ padding: '100px 20px 40px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
+      
+      <div style={{
+        position: 'absolute',
+        top: `${responsiveConfig.headerHeight}px`,
+        left: 0,
+        right: 0,
+        bottom: `${responsiveConfig.footerHeight}px`,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflow: 'hidden'
+      }}>
         <div style={{
           background: 'linear-gradient(135deg, rgba(8, 8, 12, 0.9) 0%, rgba(25, 25, 35, 0.9) 100%)',
           border: '2px solid rgba(80, 255, 214, 0.3)',
           borderRadius: '20px',
-          padding: '40px',
+          padding: `${40 * responsiveConfig.carouselScale}px`,
           backdropFilter: 'blur(12px)',
           boxShadow: '0 25px 50px -12px rgba(80, 255, 214, 0.2)',
           textAlign: 'center' as const,
-          transition: 'all 0.3s ease'
+          transition: 'all 0.3s ease',
+          transform: `scale(${responsiveConfig.carouselScale})`
         }}>
           <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔄</div>
           <h2 style={{ marginBottom: '20px' }}>Loading...</h2>
           <p style={{ color: '#B9C1C1' }}>Initializing 375 Arcade...</p>
         </div>
       </div>
+      
       <Footer />
     </div>
   );
