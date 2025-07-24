@@ -230,19 +230,66 @@ export default function Page() {
         display: none !important;
       }
     }
-    @media (min-width: 481px) and (max-width: 768px) {
-      .tablet-adjustments {
-        transform: scale(0.5) !important;
+    
+    /* iPad and Tablet Responsive Fixes */
+    @media (min-width: 481px) and (max-width: 1024px) {
+      .arcade-container {
+        padding: 80px 15px 60px !important;
+        height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
       }
-      .carousel-game-center, .carousel-game-side {
-        min-width: 200px !important;
-        max-width: 220px !important;
-        height: 180px !important;
-      }
+      
       .arcade-title-fixed {
-        max-width: 200px !important;
+        max-width: 300px !important;
+        margin-bottom: 20px !important;
+        transform: scale(0.8) !important;
+      }
+      
+      .carousel-container {
+        transform: scale(0.7) !important;
+        margin-top: -40px !important;
+      }
+      
+      .carousel-game-center {
+        min-width: 320px !important;
+        max-width: 350px !important;
+        height: 320px !important;
+      }
+      
+      .carousel-game-side {
+        min-width: 240px !important;
+        max-width: 260px !important;
+        height: 280px !important;
+      }
+      
+      .carousel-nav-button {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 20px !important;
       }
     }
+    
+    /* Specific fixes for landscape tablets */
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      .arcade-container {
+        padding: 60px 15px 40px !important;
+      }
+      
+      .arcade-title-fixed {
+        max-width: 250px !important;
+        margin-bottom: 15px !important;
+        transform: scale(0.7) !important;
+      }
+      
+      .carousel-container {
+        transform: scale(0.6) !important;
+        margin-top: -60px !important;
+      }
+    }
+    
+    /* Standard responsive breakpoints */
     @media (max-width: 1440px) {
       .arcade-container {
         padding: 120px 15px 120px !important;
@@ -252,6 +299,7 @@ export default function Page() {
         margin-bottom: 50px !important;
       }
     }
+    
     @media (max-width: 768px) {
       .arcade-container {
         padding: 100px 10px 100px !important;
@@ -332,7 +380,15 @@ export default function Page() {
         </div>
 
         {/* Desktop Content */}
-        <div className="desktop-content arcade-container" style={{ padding: '130px 20px 120px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', position: 'relative' }}>
+        <div className="desktop-content arcade-container" style={{ 
+          padding: '130px 20px 120px', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          height: '100vh', 
+          position: 'relative',
+          flexDirection: 'column'
+        }}>
           <div style={{ width: '100%', maxWidth: '1200px', textAlign: 'center', marginTop: '-20px' }}>
             <div style={{ marginBottom: '40px', position: 'relative', zIndex: 10 }}>
               <img
@@ -348,13 +404,15 @@ export default function Page() {
               />
             </div>
 
-            <GameCarousel 
-              onGameSelect={handleGamePayment}
-              onWalletConnection={handleWalletConnection}
-              onOfflinePlay={handleOfflinePlay}
-              isProcessingPayment={isProcessingPayment}
-              showPaymentButtons={false}
-            />
+            <div className="carousel-container">
+              <GameCarousel 
+                onGameSelect={handleGamePayment}
+                onWalletConnection={handleWalletConnection}
+                onOfflinePlay={handleOfflinePlay}
+                isProcessingPayment={isProcessingPayment}
+                showPaymentButtons={false}
+              />
+            </div>
           </div>
           <Footer />
         </div>
@@ -396,6 +454,7 @@ export default function Page() {
   if (address && isConnected && isAuthenticated && !hasPaid && !gameStarted && !gameOver) {
     return (
       <div style={containerStyle}>
+        <style>{mobileStyles}</style>
         <NavigationHeader 
           onHomeClick={handleHomeClick}
           onDisconnectWallet={handleDisconnectWallet}
@@ -413,12 +472,21 @@ export default function Page() {
           personalBests={personalBests}
           address={address}
         />
-        <div style={{ padding: '70px 20px 80px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', position: 'relative' }}>
+        <div className="arcade-container" style={{ 
+          padding: '70px 20px 80px', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          height: '100vh', 
+          position: 'relative',
+          flexDirection: 'column'
+        }}>
           <div style={{ width: '100%', maxWidth: '1200px', textAlign: 'center' }}>
             <div style={{ marginBottom: '30px', position: 'relative', zIndex: 10 }}>
               <img
                 src="/arcade-title.png"
                 alt="375 Arcade - Built on Irys"
+                className="arcade-title-fixed"
                 style={{
                   maxWidth: '400px',
                   width: '100%',
@@ -428,13 +496,15 @@ export default function Page() {
               />
             </div>
 
-            <GameCarousel 
-              onGameSelect={handleGamePayment}
-              onWalletConnection={handleWalletConnection}
-              onOfflinePlay={handleOfflinePlay}
-              isProcessingPayment={isProcessingPayment}
-              showPaymentButtons={true}
-            />
+            <div className="carousel-container">
+              <GameCarousel 
+                onGameSelect={handleGamePayment}
+                onWalletConnection={handleWalletConnection}
+                onOfflinePlay={handleOfflinePlay}
+                isProcessingPayment={isProcessingPayment}
+                showPaymentButtons={true}
+              />
+            </div>
           </div>
           <Footer />
         </div>

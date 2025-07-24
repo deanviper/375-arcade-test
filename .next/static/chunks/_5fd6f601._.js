@@ -4839,7 +4839,7 @@ function Page() {
         fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
         overflow: 'hidden'
     };
-    const mobileStyles = "\n    @media (max-width: 480px) {\n      .mobile-message {\n        display: flex !important;\n      }\n      .desktop-content {\n        display: none !important;\n      }\n    }\n    @media (min-width: 481px) and (max-width: 768px) {\n      .tablet-adjustments {\n        transform: scale(0.5) !important;\n      }\n      .carousel-game-center, .carousel-game-side {\n        min-width: 200px !important;\n        max-width: 220px !important;\n        height: 180px !important;\n      }\n      .arcade-title-fixed {\n        max-width: 200px !important;\n      }\n    }\n    @media (max-width: 1440px) {\n      .arcade-container {\n        padding: 120px 15px 120px !important;\n      }\n      .arcade-title-fixed {\n        max-width: 400px !important;\n        margin-bottom: 50px !important;\n      }\n    }\n    @media (max-width: 768px) {\n      .arcade-container {\n        padding: 100px 10px 100px !important;\n      }\n      .arcade-title-fixed {\n        max-width: 280px !important;\n        margin-bottom: 30px !important;\n      }\n      .carousel-container {\n        flex-direction: column !important;\n        gap: 20px !important;\n      }\n      .carousel-game-center, .carousel-game-side {\n        min-width: 250px !important;\n        max-width: 280px !important;\n        height: 350px !important;\n      }\n    }\n  ";
+    const mobileStyles = "\n    @media (max-width: 480px) {\n      .mobile-message {\n        display: flex !important;\n      }\n      .desktop-content {\n        display: none !important;\n      }\n    }\n    \n    /* iPad and Tablet Responsive Fixes */\n    @media (min-width: 481px) and (max-width: 1024px) {\n      .arcade-container {\n        padding: 80px 15px 60px !important;\n        height: 100vh !important;\n        display: flex !important;\n        flex-direction: column !important;\n        justify-content: center !important;\n      }\n      \n      .arcade-title-fixed {\n        max-width: 300px !important;\n        margin-bottom: 20px !important;\n        transform: scale(0.8) !important;\n      }\n      \n      .carousel-container {\n        transform: scale(0.7) !important;\n        margin-top: -40px !important;\n      }\n      \n      .carousel-game-center {\n        min-width: 320px !important;\n        max-width: 350px !important;\n        height: 320px !important;\n      }\n      \n      .carousel-game-side {\n        min-width: 240px !important;\n        max-width: 260px !important;\n        height: 280px !important;\n      }\n      \n      .carousel-nav-button {\n        width: 50px !important;\n        height: 50px !important;\n        font-size: 20px !important;\n      }\n    }\n    \n    /* Specific fixes for landscape tablets */\n    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {\n      .arcade-container {\n        padding: 60px 15px 40px !important;\n      }\n      \n      .arcade-title-fixed {\n        max-width: 250px !important;\n        margin-bottom: 15px !important;\n        transform: scale(0.7) !important;\n      }\n      \n      .carousel-container {\n        transform: scale(0.6) !important;\n        margin-top: -60px !important;\n      }\n    }\n    \n    /* Standard responsive breakpoints */\n    @media (max-width: 1440px) {\n      .arcade-container {\n        padding: 120px 15px 120px !important;\n      }\n      .arcade-title-fixed {\n        max-width: 400px !important;\n        margin-bottom: 50px !important;\n      }\n    }\n    \n    @media (max-width: 768px) {\n      .arcade-container {\n        padding: 100px 10px 100px !important;\n      }\n      .arcade-title-fixed {\n        max-width: 280px !important;\n        margin-bottom: 30px !important;\n      }\n      .carousel-container {\n        flex-direction: column !important;\n        gap: 20px !important;\n      }\n      .carousel-game-center, .carousel-game-side {\n        min-width: 250px !important;\n        max-width: 280px !important;\n        height: 350px !important;\n      }\n    }\n  ";
     const isAuthenticated = authed;
     const hasPaid = isPaid;
     // Wrong network check
@@ -4856,7 +4856,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 282,
+                    lineNumber: 330,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -4869,23 +4869,23 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 290,
+                    lineNumber: 338,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$modals$2f$NetworkSwitchModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 299,
+                    lineNumber: 347,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 300,
+                    lineNumber: 348,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 281,
+            lineNumber: 329,
             columnNumber: 7
         }, this);
     }
@@ -4898,7 +4898,7 @@ function Page() {
                     children: mobileStyles
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 309,
+                    lineNumber: 357,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -4910,7 +4910,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 310,
+                    lineNumber: 358,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -4923,7 +4923,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 318,
+                    lineNumber: 366,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4936,18 +4936,18 @@ function Page() {
                             leaderboard: leaderboard
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 330,
+                            lineNumber: 378,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 331,
+                            lineNumber: 379,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 329,
+                    lineNumber: 377,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4958,7 +4958,8 @@ function Page() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         height: '100vh',
-                        position: 'relative'
+                        position: 'relative',
+                        flexDirection: 'column'
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4987,46 +4988,53 @@ function Page() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 338,
+                                        lineNumber: 394,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 337,
+                                    lineNumber: 393,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$GameCarousel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    onGameSelect: handleGamePayment,
-                                    onWalletConnection: handleWalletConnection,
-                                    onOfflinePlay: handleOfflinePlay,
-                                    isProcessingPayment: isProcessingPayment,
-                                    showPaymentButtons: false
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "carousel-container",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$GameCarousel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        onGameSelect: handleGamePayment,
+                                        onWalletConnection: handleWalletConnection,
+                                        onOfflinePlay: handleOfflinePlay,
+                                        isProcessingPayment: isProcessingPayment,
+                                        showPaymentButtons: false
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/page.tsx",
+                                        lineNumber: 408,
+                                        columnNumber: 15
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 407,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 336,
+                            lineNumber: 392,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 359,
+                            lineNumber: 417,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 335,
+                    lineNumber: 383,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 308,
+            lineNumber: 356,
             columnNumber: 7
         }, this);
     }
@@ -5044,7 +5052,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 369,
+                    lineNumber: 427,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5057,7 +5065,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 377,
+                    lineNumber: 435,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$modals$2f$AuthenticationModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5065,18 +5073,18 @@ function Page() {
                     onAuthenticate: handleAuthentication
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 386,
+                    lineNumber: 444,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 390,
+                    lineNumber: 448,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 368,
+            lineNumber: 426,
             columnNumber: 7
         }, this);
     }
@@ -5085,6 +5093,13 @@ function Page() {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             style: containerStyle,
             children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
+                    children: mobileStyles
+                }, void 0, false, {
+                    fileName: "[project]/app/page.tsx",
+                    lineNumber: 457,
+                    columnNumber: 9
+                }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     onHomeClick: handleHomeClick,
                     onDisconnectWallet: handleDisconnectWallet,
@@ -5094,7 +5109,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 399,
+                    lineNumber: 458,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5107,17 +5122,19 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 407,
+                    lineNumber: 466,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "arcade-container",
                     style: {
                         padding: '70px 20px 80px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         height: '100vh',
-                        position: 'relative'
+                        position: 'relative',
+                        flexDirection: 'column'
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5136,6 +5153,7 @@ function Page() {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                         src: "/arcade-title.png",
                                         alt: "375 Arcade - Built on Irys",
+                                        className: "arcade-title-fixed",
                                         style: {
                                             maxWidth: '400px',
                                             width: '100%',
@@ -5144,46 +5162,53 @@ function Page() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 419,
+                                        lineNumber: 486,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 418,
+                                    lineNumber: 485,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$GameCarousel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    onGameSelect: handleGamePayment,
-                                    onWalletConnection: handleWalletConnection,
-                                    onOfflinePlay: handleOfflinePlay,
-                                    isProcessingPayment: isProcessingPayment,
-                                    showPaymentButtons: true
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "carousel-container",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$GameCarousel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        onGameSelect: handleGamePayment,
+                                        onWalletConnection: handleWalletConnection,
+                                        onOfflinePlay: handleOfflinePlay,
+                                        isProcessingPayment: isProcessingPayment,
+                                        showPaymentButtons: true
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/page.tsx",
+                                        lineNumber: 500,
+                                        columnNumber: 15
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 431,
+                                    lineNumber: 499,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 417,
+                            lineNumber: 484,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 439,
+                            lineNumber: 509,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 416,
+                    lineNumber: 475,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 398,
+            lineNumber: 456,
             columnNumber: 7
         }, this);
     }
@@ -5210,12 +5235,12 @@ function Page() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 455,
+                        lineNumber: 525,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 449,
+                    lineNumber: 519,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5227,7 +5252,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 467,
+                    lineNumber: 537,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5240,7 +5265,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 475,
+                    lineNumber: 545,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$GameReadyScreen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5249,18 +5274,18 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 484,
+                    lineNumber: 554,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 489,
+                    lineNumber: 559,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 448,
+            lineNumber: 518,
             columnNumber: 7
         }, this);
     }
@@ -5287,12 +5312,12 @@ function Page() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 504,
+                        lineNumber: 574,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 498,
+                    lineNumber: 568,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$NavigationHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5304,7 +5329,7 @@ function Page() {
                     isOfflineMode: isOfflineMode
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 516,
+                    lineNumber: 586,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5317,7 +5342,7 @@ function Page() {
                     address: address
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 524,
+                    lineNumber: 594,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5340,7 +5365,7 @@ function Page() {
                         playerAddress: isOfflineMode ? undefined : address
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 541,
+                        lineNumber: 611,
                         columnNumber: 13
                     }, this) : selectedGame === 'pacman' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CanvasPacman$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         start: gameStarted,
@@ -5354,23 +5379,23 @@ function Page() {
                         playerAddress: isOfflineMode ? undefined : address
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 553,
+                        lineNumber: 623,
                         columnNumber: 13
                     }, this) : null
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 533,
+                    lineNumber: 603,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 566,
+                    lineNumber: 636,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 497,
+            lineNumber: 567,
             columnNumber: 7
         }, this);
     }
@@ -5387,7 +5412,7 @@ function Page() {
                 isOfflineMode: isOfflineMode
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 574,
+                lineNumber: 644,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$LeaderboardPanel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -5400,7 +5425,7 @@ function Page() {
                 address: address
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 582,
+                lineNumber: 652,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5431,7 +5456,7 @@ function Page() {
                             children: "🔄"
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 602,
+                            lineNumber: 672,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -5441,7 +5466,7 @@ function Page() {
                             children: "Loading..."
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 603,
+                            lineNumber: 673,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5451,29 +5476,29 @@ function Page() {
                             children: "Initializing 375 Arcade..."
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 604,
+                            lineNumber: 674,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 592,
+                    lineNumber: 662,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 591,
+                lineNumber: 661,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 607,
+                lineNumber: 677,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 573,
+        lineNumber: 643,
         columnNumber: 5
     }, this);
 }
